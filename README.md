@@ -13,15 +13,34 @@
 
 - [Executive Summary](#executive-summary)
 - [Strategic Objectives](#strategic-objectives)
+  - [Primary Goals](#primary-goals)
 - [Team Structure & Roles](#team-structure--roles)
-- [Task Estimates](#task-estimates)
+  - [Engineering Team](#engineering-team-10-people)
+  - [Products Team](#products-team-4-people)
+  - [Delivery Team](#delivery-team-1-person)
 - [Parallel Workstreams](#parallel-workstreams)
-- [Integrated Timeline](#integrated-timeline)
-- [Detailed Weekly Breakdown](#detailed-weekly-breakdown)
-- [Deliverables Matrix](#deliverables-matrix)
+  - [Workstream 1: Plugin Handover](#workstream-1-plugin-handover-weeks-1-15)
+  - [Workstream 2: IaC Deployment](#workstream-2-iac-deployment-weeks-1-12)
+  - [Workstream 3: Automation & Tooling](#workstream-3-automation--tooling-ongoing)
 - [Workstream 1: Plugin Handover - Detailed Plan](#workstream-1-plugin-handover---detailed-plan)
+  - [Overview](#overview)
+  - [Plugin Inventory](#plugin-inventory)
+  - [Plugin Assignment](#plugin-assignment)
+  - [Plugin Batches](#plugin-batches)
+  - [Weeks 1-2: Preparation Phase](#weeks-1-2-preparation-phase)
+  - [Batch Cycle Pattern](#batch-cycle-pattern-2-weeks-per-batch)
+  - [Week 15: Final Handover](#week-15-final-handover)
+  - [Task Estimates](#task-estimates)
 - [Workstream 2: IaC Deployment - Detailed Plan](#workstream-2-iac-deployment---detailed-plan)
+  - [Overview](#overview-1)
+  - [Week-by-Week Breakdown](#week-by-week-breakdown)
+  - [IaC Post-Week 12: Support Mode](#iac-post-week-12-support-mode)
+  - [Task Estimates](#task-estimates-1)
 - [Workstream 3: Automation & Tooling - Detailed Plan](#workstream-3-automation--tooling---detailed-plan)
+  - [Overview](#overview-2)
+  - [Phase 1: Foundation](#phase-1-foundation-weeks-1-2)
+  - [Phase 2: Continuous Support](#phase-2-continuous-support-weeks-3-15)
+  - [Task Estimates](#task-estimates-2)
 - [IaC Deployment Implementation Specification](#iac-deployment-implementation-specification)
 - [GitLab Automated Delivery Pipeline Specification](#gitlab-automated-delivery-pipeline-specification)
 
@@ -32,7 +51,7 @@
 This comprehensive action plan coordinates three major engineering initiatives over a 15-week period (4 months):
 
 ### **Workstream 1: Plugin Handover (15 weeks)**
-Transfer 28 plugins from Engineering to Products Team with complete refactoring, Chakra UI implementation, and comprehensive documentation. Runs for the full 15-week duration.
+Transfer 30 plugins from Engineering to Products Team with complete refactoring, Chakra UI implementation, and comprehensive documentation. Runs for the full 15-week duration.
 
 ### **Workstream 2: Infrastructure-as-Code (12 weeks)**
 Build production-ready IaC deployment automation enabling Solutions Engineers to deploy full stack infrastructure with a single command. Completes by Week 12, then transitions to support mode.
@@ -46,7 +65,7 @@ Develop automation scripts, CI/CD pipelines, and governance frameworks to suppor
 **Key Milestones:** 
 - Week 2: Automation framework & CI/CD pipelines operational
 - Week 12: IaC deployment complete
-- Week 15: All 28 plugins delivered
+- Week 15: All 30 plugins delivered
 
 ---
 
@@ -60,21 +79,17 @@ Develop automation scripts, CI/CD pipelines, and governance frameworks to suppor
    - Zero-touch automation with governance built-in
 
 2. **Modernize Plugin Architecture**
-   - All 28 plugins refactored with Chakra UI
+   - All 30 plugins refactored with Chakra UI
    - Complete ownership transfer to Products Team
    - Comprehensive documentation and testing
 
-3. **Establish Automation Framework**
-   - CI/CD pipelines for all projects
+3. **Automation & Tooling (Ongoing)**
+   - Automation framework for plugin delivery
+   - CI/CD pipelines for workstreams 1 & 2
+   - Governance frameworks for code review & compliance
    - Automated compliance checking
    - Performance testing infrastructure
 
-### Success Criteria
-
-- ✅ IaC deployment tested on 3+ client sites
-- ✅ 10 plugin batches delivered (28 plugins total)
-- ✅ All automation scripts integrated into CI/CD
-- ✅ 95%+ deployment success rate
 
 
 ---
@@ -83,176 +98,32 @@ Develop automation scripts, CI/CD pipelines, and governance frameworks to suppor
 
 ### Engineering Team (10 people)
 
-| Name | Primary Role | Workstream 1 | Workstream 2 | Workstream 3 |
-|------|--------------|--------------|--------------|--------------|
-| **Xamek** | Chief Architect | Plugin standards | IaC architecture review | - |
-| **Mounir** | Senior Developer | Plugin reviews | IaC role development | Example plugin (Week 1-2) |
-| **Alaa** | DevOps Engineer | - | **IaC Lead** | CI/CD pipelines |
-| **Marawan** | AI Developer | Automation scripts | AI automation | **Automation Lead** |
-| **Omar** | Developer | Plugin development | - | - |
-| **Basem** | Developer | Plugin development | - | - |
-| **Khadra** | Developer | Plugin development | - | - |
-| **Hassan** | Developer | Plugin development | - | - |
-| **Samy** | Developer | Plugin development | - | - |
+| Name | Role |
+|------|------|
+| **Xamek** | Chief Architect |
+| **Mounir** | Senior Developer |
+| **Alaa** | DevOps Engineer |
+| **Marawan** | AI Developer |
+| **Omar** | Developer |
+| **Basem** | Developer |
+| **Khadra** | Developer |
+| **Hassan** | Developer |
+| **Samy** | Developer |
 
-### Products Team (3 people)
+### Products Team (4 people)
 
-| Name | Primary Role | Workstream 1 | Workstream 2 |
-|------|--------------|--------------|--------------|
-| **Amr** | CTO | Final reviews | - |
-| **Hajar** | Product Owner | User stories | - |
-| **Menna** | UX Designer | Figma designs | - |
-| **QA Engineer** | TBD | Testing | IaC testing |
+| Name | Role |
+|------|------|
+| **Amr** | CTO |
+| **Hajar** | Product Owner |
+| **Menna** | UX Designer |
+| **QA Engineer** | QA Engineer (TBD) |
 
 ### Delivery Team (1 person)
 
-| Name | Primary Role | Workstream 1 | Workstream 2 |
-|------|--------------|--------------|--------------|
-| **Meslmany** | Solutions Engineer | Story reviews | **IaC validation** |
-
----
-
-## Task Estimates
-
-| # | Task | Role | Estimate |
-|---|------|------|----------|
-| 1 | Create user story | Hajar | 4h |
-| 2 | Review user stories | Meslmany | 3h |
-| 3 | Technical review | Xamek | 3h |
-| 4 | Define plugin review checklist | Mounir | 2h |
-| 5 | Create example plugin | Mounir | 14h |
-| 6 | Establish Figma baseline | Menna | 8h |
-| 7 | Create design system docs | Menna | 6h |
-| 8 | Setup Chakra theme | Developer | 8h |
-| 9 | Setup linting & CI | Developers | 8h |
-| 10 | Create Figma design | Menna | 8h |
-| 11 | Implement plugin | Developer | 42h |
-| 12 | Code review | Mounir | 9h |
-| 13 | Test plugin | QA Engineer | 6h |
-| 14 | Bug fixing | Developer | 26h |
-| 15 | Final review | Amr | 3h |
-| 16 | GitLab repository scaffold | Alaa | 8h |
-| 17 | Ansible base structure | Alaa | 6-8h |
-| 18 | Bootstrap script | Alaa | 3h |
-| 19 | Inventory files setup | Alaa | 2h |
-| 20 | Environment strategy docs | Alaa | 2h |
-| 21 | ADR template | Xamek | 1h |
-| 22 | Write ADR | Xamek | 2h |
-| 23 | Automation helper scripts | Marawan | 4h |
-| 24 | Bootstrap feedback | Meslmany | 3h |
-| 25 | Install Java 11 | Alaa | 2h |
-| 26 | Install Tomcat 9 | Alaa | 2h |
-| 27 | Install GeoServer 2.23 | Alaa | 4h |
-| 28 | Configure GeoServer logging | Alaa | 2h |
-| 29 | Write GeoServer docs | Alaa | 2h |
-| 30 | Create firewall role | Alaa | 2h |
-| 31 | Configure firewall rules | Alaa | 2-4h |
-| 32 | Automated testing scripts | Marawan | 3h |
-| 33 | Validate GeoServer | Meslmany | 2h |
-| 34 | Test firewall | Meslmany | 2h |
-| 35 | Install PostgreSQL 14 | Alaa | 3h |
-| 36 | Install PostGIS 3.3 | Alaa | 2h |
-| 37 | Configure PostgreSQL | Alaa | 2h |
-| 38 | Create backup strategy | Alaa | 2h |
-| 39 | Performance tuning | Alaa | 1h |
-| 40 | Create security hardening role | Alaa | 4h |
-| 41 | Apply CIS benchmarks | Alaa | 2-4h |
-| 42 | Backup automation scripts | Marawan | 3h |
-| 43 | Validate DB access | Meslmany | 2h |
-| 44 | Test backup restore | Meslmany | 2h |
-| 45 | Install Docker 24.x | Alaa | 2h |
-| 46 | Configure Docker Swarm | Alaa | 4h |
-| 47 | Setup overlay networks | Alaa | 2-4h |
-| 48 | Secrets management | Alaa | 2h |
-| 49 | Install Keycloak 21.x | Alaa | 4h |
-| 50 | Configure Keycloak DB | Alaa | 4h |
-| 51 | Docker Compose for Keycloak | Alaa | 2h |
-| 52 | Container health check scripts | Marawan | 3h |
-| 53 | Validate Keycloak | Meslmany | 2h |
-| 54 | Validate Docker | Meslmany | 2h |
-| 55 | Create docker_containers role | Alaa | 4h |
-| 56 | Configure backend container | Alaa | 2h |
-| 57 | Configure frontend container | Alaa | 2h |
-| 58 | Create db_config role | Alaa | 2h |
-| 59 | SQL initialization scripts | Alaa | 2h |
-| 60 | Install Nginx | Alaa | 2h |
-| 61 | Configure SSL/TLS | Alaa | 2h |
-| 62 | Setup Let's Encrypt | Alaa | 2-4h |
-| 63 | Nginx config templates | Alaa | 2h |
-| 64 | Config validation scripts | Marawan | 5h |
-| 65 | Validate SSL | Meslmany | 2h |
-| 66 | Test proxy endpoints | Meslmany | 3h |
-| 67 | Create geoserver_layers role | Alaa | 4h |
-| 68 | REST API integration | Alaa | 4h |
-| 69 | Upload shapefiles logic | Alaa | 2h |
-| 70 | Layer naming conventions | Alaa | 1h |
-| 71 | SLD management | Alaa | 2h |
-| 72 | Layer validation scripts | Marawan | 4h |
-| 73 | Prepare sample data | Meslmany | 3h |
-| 74 | Validate layers | Meslmany | 2h |
-| 75 | Create keycloak_config role | Alaa | 4h |
-| 76 | Configure realm | Alaa | 2h |
-| 77 | Create users & roles | Alaa | 2h |
-| 78 | Setup SSO | Alaa | 2h |
-| 79 | Configure RBAC | Alaa | 2h |
-| 80 | Realm export | Alaa | 1h |
-| 81 | User provisioning automation | Marawan | 4h |
-| 82 | Create user templates | Meslmany | 2h |
-| 83 | Test login flows | Meslmany | 2h |
-| 84 | Install Prometheus | Alaa | 3h |
-| 85 | Install Grafana | Alaa | 3h |
-| 86 | Configure alerting rules | Alaa | 2h |
-| 87 | Create dashboards | Alaa | 2h |
-| 88 | Install Loki | Alaa | 4h |
-| 89 | Configure log sources | Alaa | 2h |
-| 90 | Create adr_logger role | Alaa | 2-4h |
-| 91 | GitLab CI ADR check | Alaa | 1h |
-| 92 | ADR review | Marawan | 4h |
-| 93 | ADR finalization | Marawan | 2h |
-| 94 | Review dashboards | Meslmany | 2h |
-| 95 | Test alerts | Meslmany | 2h |
-| 96 | Create backup_restore role | Alaa | 6h |
-| 97 | DB backup scripts | Alaa | 2h |
-| 98 | Config backup scripts | Alaa | 2h |
-| 99 | Data backup scripts | Alaa | 2h |
-| 100 | Create verify playbook | Alaa | 4h |
-| 101 | Write Molecule tests | Alaa | 2-4h |
-| 102 | CI test integration | Alaa | 2h |
-| 103 | Test automation scripts | Marawan | 5h |
-| 104 | Define test cases | Meslmany | 2h |
-| 105 | DR testing | Meslmany | 3h |
-| 106 | Create deploy playbook | Alaa | 6h |
-| 107 | Environment configs | Alaa | 2h |
-| 108 | Create rollback playbook | Alaa | 4h |
-| 109 | Configure CI/CD pipeline | Alaa | 4-6h |
-| 110 | Add approval gates | Alaa | 1h |
-| 111 | Deployment validation scripts | Marawan | 5h |
-| 112 | Test staging deployment | Meslmany | 5h |
-| 113 | Configure n8n webhooks | Alaa | 6h |
-| 114 | Create DR procedures | Alaa | 4h |
-| 115 | Setup JMeter | Alaa | 2h |
-| 116 | Create performance tests | Alaa | 4-6h |
-| 117 | Run benchmarks | Alaa | 2h |
-| 118 | Security audit | Alaa | 2h |
-| 119 | Write operator docs | Marawan | 6h |
-| 120 | Write user docs | Meslmany | 6h |
-| 121 | E2E testing | Alaa | 6h |
-| 122 | Create README | Alaa | 2h |
-| 123 | Create quick-start guide | Alaa | 2h |
-| 124 | Create architecture diagrams | Alaa | 4h |
-| 125 | SE packaging | Alaa | 2-4h |
-| 126 | Final docs polish | Marawan | 5h |
-| 127 | SE acceptance testing | Meslmany | 6h |
-| 128 | Design automation architecture | Xamek | 8h |
-| 129 | Define paved roads standards | Xamek | 4h |
-| 130 | Begin example plugin | Mounir | 8h |
-| 131 | Create paved roads script | Marawan | 8h |
-| 132 | Create user story coverage script | Marawan | 6h |
-| 133 | Create code review automation | Marawan | 6h |
-| 134 | Create Figma compliance script | Marawan | 4h |
-| 135 | Complete example plugin | Mounir | 8h |
-| 136 | Integrate CI/CD | Marawan | 8h |
-| 137 | Automation support | Marawan | 4-6h |
+| Name | Role |
+|------|------|
+| **Meslmany** | Solutions Engineer |
 
 ---
 
@@ -260,21 +131,20 @@ Develop automation scripts, CI/CD pipelines, and governance frameworks to suppor
 
 ### Workstream 1: Plugin Handover (Weeks 1-15)
 
-**Objective:** Transfer 28 plugins to Products Team
+**Objective:** Transfer 30 plugins to Products Team
 
 **Timeline:** 15 weeks (2-week cycles per batch)
 - Weeks 1-2: Preparation
 - Weeks 3-14: 6 batches Ã— 2 weeks each
 - Week 15: Final handover
 
-**Team:** 5 developers + Hajar + Menna + Mounir + Xamek + QA
+**Team:** 5 developers + Hajar + Menna + Mounir + Xamek + Amr + QA
 
 **Key Deliverables:**
-- 28 refactored plugins with Chakra UI
+- 30 refactored plugins with Chakra UI
 - Complete documentation (user stories, technical docs)
 - Figma designs for all UIs
-- Test coverage >80%
-- Handover materials
+
 
 ### Workstream 2: IaC Deployment (Weeks 1-12)
 
@@ -285,14 +155,13 @@ Develop automation scripts, CI/CD pipelines, and governance frameworks to suppor
 - Weeks 3-10: Role development & testing
 - Weeks 11-12: Integration & documentation
 
-**Team:** Marawan (lead) + Meslmany + AI Developer + Xamek (reviews)
+**Team:** Alaa + Meslmany + Marawan + Xamek 
 
 **Key Deliverables:**
 - 17 Ansible roles
 - GitLab CI/CD pipeline
 - JMeter performance tests
 - Complete documentation
-- 3+ successful client deployments
 
 ### Workstream 3: Automation & Tooling (Ongoing)
 
@@ -300,7 +169,7 @@ Develop automation scripts, CI/CD pipelines, and governance frameworks to suppor
 
 **Timeline:** Weeks 1-12 (ongoing)
 
-**Team:** Marawan + AI Developer + Mounir
+**Team:** Marawan
 
 **Key Deliverables:**
 - Paved roads compliance scripts
@@ -311,363 +180,58 @@ Develop automation scripts, CI/CD pipelines, and governance frameworks to suppor
 
 ---
 
-## Integrated Timeline
-
-### Phase 1: Foundation (Weeks 1-2)
-
-**Focus:** Setup, planning, and initial preparation
-
-| Week | Plugin Handover | IaC Deployment | Automation |
-|------|-----------------|----------------|------------|
-| **1** | - Hajar: Create Batch 1 stories (12h)<br>- Meslmany: Review stories (3h)<br>- Xamek: Tech review (3h)<br>- Mounir: Define checklist (2h)<br>- Menna: Figma baseline (8h)<br>- Devs: Setup Chakra (8h each) | - Alaa: Repo scaffold (14-16h)<br>- Meslmany: Bootstrap feedback (3h)<br>- Marawan (AI automation): Helper scripts (4h)<br>- Xamek: Environment strategy (included) | - Xamek: Design automation architecture (8h)<br>- Mounir: Begin example plugin (8h)<br>- Menna: Design system docs (6h) |
-| **2** | - Hajar: Create Batch 2-3 stories (24h)<br>- Meslmany: Review (6h)<br>- Xamek: Approve approach (6h)<br>- Mounir: Complete example (8h)<br>- Menna: Figma components (16h)<br>- Devs: Refactor patterns (16h each) | - Alaa: GeoServer + Firewall roles (16-18h)<br>- Meslmany: Validate deployment (4h)<br>- Marawan (AI automation): Testing scripts (3h) | - Marawan: Paved roads script (16h)<br>- Marawan: Figma compliance CI (8h)<br>- Marawan (AI automation): Automation helpers (ongoing) |
-
-**Phase 1 Deliverables:**
-- ✅ Plugin Batch 1-3 stories ready
-- ✅ IaC repository structure complete
-- ✅ Example plugin created
-- ✅ Automation architecture defined
-
-### Phase 2: Parallel Execution (Weeks 3-12)
-
-**Focus:** Simultaneous plugin development and IaC implementation
-
-#### Weeks 3-4: Plugin Batch 1 + IaC Week 3-4
-
-| Workstream | Week 3 | Week 4 |
-|------------|--------|--------|
-| **Plugins** | **Implementation**<br>- 3 devs: Implement Batch 1 (42h each)<br>- Menna: Figma (24h)<br>- Mounir: Reviews (9h) | **Testing**<br>- 3 devs: Bug fixing (26h each)<br>- QA: Testing (18h)<br>- Amr: Final review (3h) |
-| **IaC** | **PostgreSQL + Security**<br>- Alaa: DB + hardening roles (16-18h)<br>- Meslmany: Validate (4h)<br>- Marawan (AI automation): Backup scripts (3h) | **Keycloak + Docker**<br>- Alaa: Keycloak install + Swarm (18-20h)<br>- Meslmany: Validate (4h)<br>- Marawan (AI automation): Health checks (3h) |
-
-#### Weeks 5-6: Plugin Batch 2 + IaC Week 5-6
-
-| Workstream | Week 5 | Week 6 |
-|------------|--------|--------|
-| **Plugins** | **Implementation**<br>- 3 devs: Implement Batch 2 (42h each)<br>- Menna: Figma (24h)<br>- Mounir: Reviews (9h) | **Testing**<br>- 3 devs: Bug fixing (26h each)<br>- QA: Testing (18h)<br>- Amr: Final review (3h) |
-| **IaC** | **Containers + Proxy**<br>- Alaa: Docker containers + Nginx + SSL (18-20h)<br>- Meslmany: SSL validation (5h)<br>- Marawan (AI automation): Config validation (5h) | **GeoServer Layers**<br>- Alaa: Layer management role (14-16h)<br>- Meslmany: Sample data (5h)<br>- Marawan (AI automation): Data validation (4h) |
-
-#### Weeks 7-8: Plugin Batch 3 + IaC Week 7-8
-
-| Workstream | Week 7 | Week 8 |
-|------------|--------|--------|
-| **Plugins** | **Implementation**<br>- 3 devs: Implement Batch 3 (42h each)<br>- Menna: Figma (24h)<br>- Mounir: Reviews (9h) | **Testing**<br>- 3 devs: Bug fixing (26h each)<br>- QA: Testing (18h)<br>- Amr: Final review (3h) |
-| **IaC** | **Keycloak Config**<br>- Alaa: Realm + users + RBAC (14-16h)<br>- Meslmany: Login testing (4h)<br>- Marawan (AI automation): User provisioning (4h) | **Monitoring + ADRs**<br>- Alaa: Prometheus + Grafana + Loki (18-20h)<br>- Meslmany: Dashboard review (4h)<br>- Marawan (AI automation): ADR finalization (6h) |
-
-#### Weeks 9-10: Plugin Batch 4 + IaC Week 9-10
-
-| Workstream | Week 9 | Week 10 |
-|------------|--------|--------|
-| **Plugins** | **Implementation**<br>- 3 devs: Implement Batch 4 (42h each)<br>- Menna: Figma (24h)<br>- Mounir: Reviews (9h) | **Testing**<br>- 3 devs: Bug fixing (26h each)<br>- QA: Testing (18h)<br>- Amr: Final review (3h) |
-| **IaC** | **Backup + Testing**<br>- Alaa: Backup role + Molecule tests (18-20h)<br>- Meslmany: DR testing (5h)<br>- Marawan (AI automation): Test automation (5h) | **Master Playbook + CI/CD**<br>- Alaa: Deploy playbook + pipeline (16-18h)<br>- Meslmany: Staging test (5h)<br>- Marawan (AI automation): Validation scripts (5h) |
-
-#### Weeks 11-12: Plugin Batch 5 + IaC Week 11-12
-
-| Workstream | Week 11 | Week 12 |
-|------------|--------|--------|
-| **Plugins** | **Implementation**<br>- 3 devs: Implement Batch 5 (42h each)<br>- Menna: Figma (24h)<br>- Mounir: Reviews (9h) | **Testing**<br>- 3 devs: Bug fixing (26h each)<br>- QA: Testing (18h)<br>- Amr: Final review (3h) |
-| **IaC** | **DR + Performance + Docs**<br>- Alaa: n8n + DR + benchmarks (16-18h)<br>- Meslmany: User docs (6h)<br>- Marawan (AI automation): Operator docs (6h) | **Final Integration + Handover**<br>- Alaa: E2E testing + packaging (14-16h)<br>- Meslmany: Acceptance testing (6h)<br>- Marawan (AI automation): Final docs (5h)<br>**🎉 IaC COMPLETE** |
-
-**Phase 2 Deliverables:**
-- ✅ 5 plugin batches delivered (15 plugins)
-- ✅ IaC deployment complete and production-ready
-- ✅ All automation scripts integrated
-
-### Phase 3: Plugin Completion (Weeks 13-15)
-
-**Focus:** Complete final plugin batch and handover
-
-| Weeks | Batches | Plugins | Status |
-|-------|---------|---------|--------|
-| 13-14 | Batch 6 | Go To Point, Smart Indoor, Classification | Final batch |
-| 15 | Final | Handover & retrospective | Complete |
-
-**Note:** IaC team transitions to support/maintenance mode after Week 12. Plugin team completes 3 weeks later at Week 15.
-
----
-
-## Detailed Weekly Breakdown
-
-### Week 1 (Oct 14-18, 2025)
-
-**Theme:** Foundation & Setup
-
-**Plugin Handover:**
-- Hajar: Create Batch 1 user stories (Bookmarks, Identify, Advanced Search) - 12h
-- Meslmany: Review stories for feasibility - 3h
-- Xamek: Technical review - 3h
-- Mounir: Define review checklist + begin example plugin - 10h
-- Menna: Establish Figma baseline + design system docs - 14h
-- Developers: Setup Chakra theme, linting, CI - 8h each (40h total)
-
-**IaC Deployment:**
-- Alaa: GitLab repo scaffold, Ansible structure, bootstrap script - 14-16h
-- Meslmany: Bootstrap feedback - 3h
-- Marawan (AI automation): Automation helper scripts - 4h
-- Xamek: Environment strategy (included in 3h above)
-
-**Automation:**
-- Xamek: Design automation architecture - 8h
-- Menna: Design system documentation - 6h
-
-**Deliverables:**
-- ✅ Batch 1 stories ready for development
-- ✅ IaC repository initialized
-- ✅ Development environments ready
-- ✅ Automation architecture defined
-
-**Total Hours:** ~120h across team
-
----
-
-### Week 2 (Oct 21-25, 2025)
-
-**Theme:** Preparation Complete
-
-**Plugin Handover:**
-- Hajar: Create Batch 2-3 stories (6 plugins) - 24h
-- Meslmany: Review Batch 2-3 stories - 6h
-- Xamek: Approve technical approach - 6h
-- Mounir: Complete example plugin + validation - 16h
-- Menna: Figma library for shared components - 16h
-- Developers: Spike refactor patterns, Chakra conversions - 16h each (80h total)
-
-**IaC Deployment:**
-- Alaa: GeoServer role + Firewall role - 16-18h
-- Meslmany: Validate deployment - 4h
-- Marawan (AI automation): Testing scripts - 3h
-
-**Automation:**
-- Marawan: Paved roads compliance script + Figma CI integration - 24h
-- Marawan (AI automation): Automation helpers - ongoing
-
-**Deliverables:**
-- ✅ Batch 2-3 stories ready
-- ✅ Example plugin complete
-- ✅ GeoServer + Firewall roles working
-- ✅ Automation scripts integrated
-
-**Total Hours:** ~195h across team
-
----
-
-### Weeks 3-4 (Oct 28-Nov 8, 2025)
-
-**Theme:** First Deliveries
-
-**Plugin Batch 1 (Bookmarks, Identify, Advanced Search):**
-- Week 3: Implementation (3 devs × 42h = 126h)
-- Week 4: Testing & bug fixing (3 devs × 26h = 78h)
-- Supporting: Hajar (3h), Menna (24h), Mounir (9h), Amr (3h), QA (18h)
-
-**IaC:**
-- Week 3: PostgreSQL + PostGIS + Security hardening - Alaa (16-18h)
-- Week 4: Keycloak install + Docker Swarm - Alaa (18-20h)
-- Supporting: Meslmany (8h total), Marawan/AI Dev (6h total)
-
-**Deliverables:**
-- ✅ 3 plugins delivered to Products Team
-- ✅ Database + security infrastructure ready
-- ✅ Keycloak + Docker operational
-
-**Total Hours:** ~320h across 2 weeks
-
----
-
-### Weeks 5-6 (Nov 11-22, 2025)
-
-**Theme:** Momentum Building
-
-**Plugin Batch 2 (Spatial Search, Driller, Measurement):**
-- Week 5: Implementation (3 devs Ã— 42h = 126h)
-- Week 6: Testing & bug fixing (3 devs Ã— 26h = 78h)
-- Supporting: Hajar (3h), Menna (24h), Mounir (9h), Amr (3h), QA (18h)
-
-**IaC:**
-- Week 5: Docker containers + DB config + Reverse proxy + SSL - Alaa (18-20h)
-- Week 6: GeoServer layers + validation - Alaa (14-16h)
-- Supporting: Meslmany (10h total), Marawan/AI Dev (9h total)
-
-**Deliverables:**
-- ✅ 6 plugins total delivered
-- ✅ Application services deployed
-- ✅ SSL/TLS configured
-- ✅ GeoServer layers working
-
-**Total Hours:** ~330h across 2 weeks
-
----
-
-### Weeks 7-8 (Nov 25-Dec 6, 2025)
-
-**Theme:** Mid-Point Progress
-
-**Plugin Batch 3 (Feature Selector, Sketching, Fulltext Search):**
-- Week 7: Implementation (3 devs Ã— 42h = 126h)
-- Week 8: Testing & bug fixing (3 devs Ã— 26h = 78h)
-- Supporting: Hajar (3h), Menna (24h), Mounir (9h), Amr (3h), QA (18h)
-
-**IaC:**
-- Week 7: Keycloak config + SSO + RBAC - Alaa (14-16h)
-- Week 8: Monitoring + Logging + ADR review - Alaa (18-20h)
-- Supporting: Meslmany (8h total), Marawan/AI Dev (10h total)
-
-**Deliverables:**
-- ✅ 9 plugins total delivered
-- ✅ Identity management complete
-- ✅ Monitoring & logging operational
-- ✅ All ADRs reviewed
-
-**Total Hours:** ~330h across 2 weeks
-
----
-
-### Weeks 9-10 (Dec 9-20, 2025)
-
-**Theme:** Testing & Integration
-
-**Plugin Batch 4 (Timeline, TOC, Charts):**
-- Week 9: Implementation (3 devs Ã— 42h = 126h)
-- Week 10: Testing & bug fixing (3 devs Ã— 26h = 78h)
-- Supporting: Hajar (3h), Menna (24h), Mounir (9h), Amr (3h), QA (18h)
-
-**IaC:**
-- Week 9: Backup/restore + Molecule tests - Alaa (18-20h)
-- Week 10: Master playbook + CI/CD pipeline - Alaa (16-18h)
-- Supporting: Meslmany (10h total), Marawan/AI Dev (10h total)
-
-**Deliverables:**
-- ✅ 12 plugins total delivered
-- ✅ Backup/restore tested
-- ✅ Full deployment automation working
-- ✅ CI/CD pipeline operational
-
-**Total Hours:** ~340h across 2 weeks
-
----
-
-### Weeks 11-12 (Dec 23-Jan 3, 2026)
-
-**Theme:** Completion & Handover
-
-**Plugin Batch 5 (Reporting, Export PDF, Simple Import):**
-- Week 11: Implementation (3 devs Ã— 42h = 126h)
-- Week 12: Testing & bug fixing (3 devs Ã— 26h = 78h)
-- Supporting: Hajar (3h), Menna (24h), Mounir (9h), Amr (3h), QA (18h)
-
-**IaC:**
-- Week 11: DR testing + Performance benchmarks + Documentation - Alaa (16-18h)
-- Week 12: Final integration + SE packaging + Handover - Alaa (14-16h)
-- Supporting: Meslmany (12h total), Marawan/AI Dev (11h total)
-
-**Deliverables:**
-- ✅ 15 plugins total delivered
-- ✅ **🎉 IaC DEPLOYMENT COMPLETE**
-- ✅ Performance benchmarks passed
-- ✅ Complete documentation
-- ✅ SE acceptance sign-off
-
-**Total Hours:** ~330h across 2 weeks
-
-**🎊 MAJOR MILESTONE: IaC Project Complete!**
-
----
-
-### Week 13 (Jan 6-10, 2026)
-
-**Theme:** Transition & Continuation
-
-**Plugin Batch 6 (Inbox, Cards, Simple Search):**
-- Week 13: Implementation (3 devs Ã— 42h = 126h)
-- Supporting: Hajar (3h), Menna (24h), Mounir (9h)
-
-**IaC:**
-- Alaa: Support mode (4-8h/week for issues)
-- First production client deployment
-
-**Deliverables:**
-- ✅ 18 plugins total delivered
-- ✅ IaC deployed to first client site
-
-**Total Hours:** ~170h
-
----
-
-### Week 15 (Jan 13-17, 2026)
-
-**Theme:** Final Handover
-
-**Tasks:**
-- Compile all handover materials (50h total)
-- Final documentation review
-- Products Team acceptance testing
-- Sign-off and celebration
-- Project retrospective
-
-**IaC:**
-- Alaa: Support & maintenance (4-8h/week)
-- Continue deploying to additional client sites
-
-**Final Deliverables:**
-- ✅ All 28 plugins delivered
-- ✅ IaC deployed to 3+ clients
-- ✅ Complete project retrospective
-- ✅ Knowledge transfer complete
-- ✅ Products Team sign-off
-
----
-
-## Deliverables Matrix
-
-### IaC Deployment Deliverables (Week 12)
-
-| Category | Deliverable | Owner | Status |
-|----------|-------------|-------|--------|
-| **Infrastructure** | 17 Ansible roles (all services) | Marawan | Week 12 |
-| **Automation** | GitLab CI/CD pipeline | Marawan | Week 10 |
-| **Testing** | 189 Molecule tests (84% coverage) | Marawan + AI Dev | Week 9 |
-| **Performance** | 6 JMeter test plans | Marawan + AI Dev | Week 11 |
-| **Documentation** | User guide (42 pages) | Meslmany | Week 11 |
-| **Documentation** | Operator runbook (67 pages) | Marawan | Week 11 |
-| **Documentation** | Troubleshooting guide (34 pages) | Meslmany | Week 11 |
-| **Documentation** | API documentation (28 pages) | AI Dev | Week 11 |
-| **Documentation** | Architecture diagrams (8 diagrams) | AI Dev | Week 12 |
-| **Documentation** | Configuration reference (51 pages) | Marawan | Week 12 |
-| **Governance** | 11 ADRs (all decisions documented) | All | Week 8 |
-| **Security** | Security audit report | Marawan | Week 11 |
-| **Validation** | 3+ successful client deployments | Meslmany | Week 13+ |
-
-### Plugin Handover Deliverables (Week 23)
-
-| Category | Deliverable | Owner | Status |
-|----------|-------------|-------|--------|
-| **Code** | 28 refactored plugins | Developers | Week 22 |
-| **UI** | Chakra UI implementation (100%) | Developers | Week 22 |
-| **Documentation** | User stories (28 plugins) | Hajar | Week 22 |
-| **Documentation** | Technical documentation (28 plugins) | Developers | Week 22 |
-| **Design** | Figma designs (28 plugins) | Menna | Week 22 |
-| **Testing** | Test coverage >80% | Developers + QA | Week 22 |
-| **Quality** | Code review sign-offs | Mounir + Amr | Week 22 |
-| **Handover** | Handover materials | All | Week 23 |
-
-### Automation Deliverables (Ongoing)
-
-| Category | Deliverable | Owner | Status |
-|----------|-------------|-------|--------|
-| **CI/CD** | Paved roads compliance scripts | Marawan | Week 2 |
-| **CI/CD** | User story coverage automation | Marawan | Week 2 |
-| **CI/CD** | Code review automation | Marawan | Week 2 |
-| **CI/CD** | Figma compliance checking | Marawan | Week 2 |
-| **Reference** | Example plugin | Mounir | Week 2 |
-| **Standards** | Paved roads documentation | Xamek | Week 2 |
-
----
-
 ## Workstream 1: Plugin Handover - Detailed Plan
 
 ### Overview
 **Duration:** 15 weeks  
 **Team:** 5 Developers (Omar, Basem, Khadra, Hassan, Samy), Hajar (Product Owner), Menna (UX Designer), Mounir (Code Reviews), Xamek (Technical Reviews), Amr (Final Reviews), QA Engineer, Meslmany (Story Reviews)  
-**Objective:** Transfer 28 plugins to Products Team with Chakra UI refactoring
+**Objective:** Transfer 30 plugins to Products Team with Chakra UI refactoring
+
+### Plugin Inventory
+
+| # | Plugin Name | Batch |
+|---|-------------|-------|
+| 1 | Bookmarks | 1 |
+| 2 | Identify | 1 |
+| 3 | Advanced Search | 1 |
+| 4 | Spatial Search | 1 |
+| 5 | Driller | 1 |
+| 6 | Measurement | 2 |
+| 7 | Feature Selector | 2 |
+| 8 | Sketching | 2 |
+| 9 | Fulltext Search | 2 |
+| 10 | Timeline | 2 |
+| 11 | TOC | 3 |
+| 12 | Charts | 3 |
+| 13 | Reporting | 3 |
+| 14 | Export PDF | 3 |
+| 15 | Simple Import | 3 |
+| 16 | Inbox | 4 |
+| 17 | Cards | 4 |
+| 18 | Simple Search | 4 |
+| 19 | Geometry | 4 |
+| 20 | Legend | 4 |
+| 21 | Data Inspector | 5 |
+| 22 | Find Nearest | 5 |
+| 23 | Alarms | 5 |
+| 24 | Editing | 5 |
+| 25 | Territory Manager | 5 |
+| 26 | Go To Point | 6 |
+| 27 | Smart Indoor | 6 |
+| 28 | Classification | 6 |
+| 29 | Data Review | 6 |
+| 30 | More Info | 6 |
+
+
+### Plugin Assignment
+
+| Developer | Batch 1 | Batch 2 | Batch 3 | Batch 4 | Batch 5 | Batch 6 |
+|-----------|---------|---------|---------|---------|---------|---------|
+| **Omar** | Bookmarks | Measurement | TOC | Inbox | Data Inspector | Go To Point |
+| **Basem** | Identify | Feature Selector | Charts | Cards | Find Nearest | Smart Indoor |
+| **Khadra** | Advanced Search | Sketching | Reporting | Simple Search | Alarms | Classification |
+| **Hassan** | Spatial Search | Fulltext Search | Export PDF | Geometry | Editing | Data Review |
+| **Samy** | Driller | Timeline | Simple Import | Legend | Territory Manager | More Info |
 
 ### Plugin Batches
 
@@ -679,7 +243,7 @@ Develop automation scripts, CI/CD pipelines, and governance frameworks to suppor
 | Batch 3 | 7-8 | TOC, Charts, Reporting, Export PDF, Simple Import | 5 |
 | Batch 4 | 9-10 | Inbox, Cards, Simple Search, Geometry, Legend | 5 |
 | Batch 5 | 11-12 | Data Inspector, Find Nearest, Alarms, Editing, Territory Manager | 5 |
-| Batch 6 | 13-14 | Go To Point, Smart Indoor, Classification | 3 |
+| Batch 6 | 13-14 | Go To Point, Smart Indoor, Classification, Data Review, More Info | 5 |
 | Handover | 15 | Final documentation & transfer | - |
 
 ### Weeks 1-2: Preparation Phase
@@ -687,18 +251,29 @@ Develop automation scripts, CI/CD pipelines, and governance frameworks to suppor
 **Focus:** Standards, tools, and example plugin
 
 **Tasks:**
-- Hajar: Create user stories for Batch 1-3 (36h)
-- Meslmany: Review user stories (9h)
-- Xamek: Technical review and approve standards (9h)
-- Mounir: Define review checklist and create example plugin (16h)
-- Menna: Establish Figma baseline and design system docs (14h)
-- All Developers: Setup Chakra theme, linting, CI (40h total)
+
+
+| Task | Role | Estimate | Calculation |
+|------|------|----------|-------------|
+| User Story Creation | Hajar | 60h | 15 plugins × 4h |
+| User Story Review | Meslmany | 15h | 15 plugins × 1h |
+| User Story Review | Xamek | 15h | 15 plugins × 1h |
+| User Story Review | Mounir | 15h | 15 plugins × 1h |
+| Plugin Review Checklist | Mounir | 2h | One-time task |
+| Example Plugin | Mounir | 14h | One-time task |
+| Figma Design Review | Mounir | 5h | 5 plugins × 1h |
+| Figma Baseline | Menna | 8h | One-time task |
+| Design System Docs | Menna | 6h | One-time task |
+| Figma Designs | Menna | 40h | 5 plugins × 8h |
+| Chakra Theme Setup | All Developers | 8h | One-time task |
+| Linting & CI Setup | All Developers | 8h | One-time task |
 
 **Deliverables:**
 - ✅ Example plugin with Chakra UI, Penta Grid, Penta Form Builder
 - ✅ Plugin review checklist
 - ✅ Figma design system
-- ✅ User stories for first 9 plugins
+- ✅ User stories for first 15 plugins (Batches 1-3)
+- ✅ Figma designs for Batch 1 (5 plugins)
 - ✅ Development environment ready
 
 ---
@@ -708,27 +283,31 @@ Develop automation scripts, CI/CD pipelines, and governance frameworks to suppor
 Each batch follows the same pattern:
 
 #### Week 1 (Implementation)
-**Focus:** Development and design
+**Focus:** Development and design for next batch
 
 **Tasks:**
-- Hajar: Create user stories for next batch (20h for 5 plugins)
-- Menna: Create Figma designs for 5 plugins (40h)
-- 5 Developers: Implement plugins (42h each = 210h total)
-- Mounir: Code review (15h)
-- Meslmany: Review user stories (5h)
 
-**All Developers Active:**
-- All 5 developers (Omar, Basem, Khadra, Hassan, Samy) work simultaneously
-- Each developer implements 1 plugin per batch
-- No idle developers - full team utilization
+| Task | Role | Estimate | Calculation |
+|------|------|----------|-------------|
+| User Story Creation (next batch) | Hajar | 20h | 5 plugins × 4h |
+| User Story Review (next batch) | Meslmany | 5h | 5 plugins × 1h |
+| User Story Review (next batch) | Xamek | 5h | 5 plugins × 1h |
+| User Story Review (next batch) | Mounir | 5h | 5 plugins × 1h |
+| Figma Designs (next batch) | Menna | 40h | 5 plugins × 8h |
+| Figma Design Review (next batch) | Mounir | 5h | 5 plugins × 1h |
+| Plugin Implementation (current batch) | 5 Developers | 210h | 5 plugins × 42h each |
+| Code Review (current batch) | Mounir | 45h | 5 plugins × 9h |
 
 #### Week 2 (Testing & QA)
 **Focus:** Bug fixing and quality assurance
 
 **Tasks:**
-- QA Engineer: Test all 5 plugins (30h)
-- 5 Developers: Bug fixing (26h each = 130h total)
-- Amr: Final review and approval (5h)
+
+| Task | Role | Estimate | Calculation |
+|------|------|----------|-------------|
+| Plugin Testing | QA Engineer | 30h | 5 plugins × 6h |
+| Bug Fixing | 5 Developers | 130h | 5 plugins × 26h each |
+| Final Review | Amr | 15h | 5 plugins × 3h |
 
 **Deliverables per Batch:**
 - ✅ 5 plugins refactored with Chakra UI (3 for Batch 6)
@@ -741,19 +320,22 @@ Each batch follows the same pattern:
 
 ---
 
-### Week 23: Final Handover
+### Week 15: Final Handover
 
 **Focus:** Documentation and knowledge transfer
 
 **Tasks:**
-- Compile all handover materials (50h total)
-- Final documentation review
-- Knowledge transfer sessions
-- Products Team acceptance testing
-- Sign-off and celebration
+
+| Task | Role | Estimate | Calculation |
+|------|------|----------|-------------|
+| Compile handover materials | All Team | 50h | Combined effort |
+| Final documentation review | Mounir + Xamek | Included | Part of handover |
+| Knowledge transfer sessions | All Team | Included | Part of handover |
+| Products Team acceptance testing | Products Team | Included | Part of handover |
+| Sign-off and celebration | All | Included | Part of handover |
 
 **Deliverables:**
-- ✅ 28 plugins delivered
+- ✅ 30 plugins delivered
 - ✅ Complete technical documentation
 - ✅ All Figma designs
 - ✅ Handover checklist completed
@@ -761,43 +343,30 @@ Each batch follows the same pattern:
 
 ---
 
-### Plugin Handover Checklist (per plugin)
+### Task Estimates
 
-**Code Quality:**
-- [ ] Chakra UI components used throughout
-- [ ] Penta Grid integration working
-- [ ] Penta Form Builder implemented
-- [ ] Code review completed
-- [ ] No critical or high bugs
-- [ ] Test coverage >80%
-
-**Documentation:**
-- [ ] User story complete
-- [ ] Technical documentation written
-- [ ] API documentation (if applicable)
-- [ ] Configuration guide
-- [ ] Known issues documented
-
-**Design:**
-- [ ] Figma design approved
-- [ ] Design system compliance verified
-- [ ] Responsive design tested
-- [ ] Accessibility requirements met
-
-**Testing:**
-- [ ] Unit tests passing
-- [ ] Integration tests passing
-- [ ] E2E tests passing
-- [ ] QA sign-off received
-- [ ] CTO approval received
-
-**Handover:**
-- [ ] Demo to Products Team
-- [ ] Knowledge transfer session
-- [ ] Handover document signed
-- [ ] Support period defined
+| # | Task | Role | Estimate |
+|---|------|------|----------|
+| 1 | Create user story | Hajar | 4h |
+| 2 | Review user story | Meslmany | 1h |
+| 3 | Review user story | Xamek | 1h |
+| 4 | Review user story | Mounir | 1h |
+| 5 | Define plugin review checklist | Mounir | 2h |
+| 6 | Create example plugin | Mounir | 14h |
+| 7 | Establish Figma baseline | Menna | 8h |
+| 8 | Create design system docs | Menna | 6h |
+| 9 | Setup Chakra theme | Developer | 8h |
+| 10 | Setup linting & CI | Developers | 8h |
+| 11 | Create Figma design | Menna | 8h |
+| 12 | Review Figma design | Mounir | 1h |
+| 13 | Implement plugin | Developer | 42h |
+| 14 | Code review | Mounir | 9h |
+| 15 | Test plugin | QA Engineer | 6h |
+| 16 | Bug fixing | Developer | 26h |
+| 17 | Final review | Amr | 3h |
 
 ---
+
 
 ## Workstream 2: IaC Deployment - Detailed Plan
 
@@ -812,18 +381,13 @@ Each batch follows the same pattern:
 **Focus:** Repository structure and planning
 
 **Tasks:**
-- GitLab repository scaffold with Ansible best practices
-- Ansible base structure (roles/, playbooks/, inventory/, group_vars/)
-- Bootstrap script for automated setup
-- Inventory files for dev/staging/production environments
-- Define environment strategy (resource allocation, network topology)
-- Draft ADR template for decision documentation
-- Write ADR-000: IaC Strategy & Repository Layout
 
-**Team:**
-- Alaa: 14-16h (repo setup, Ansible structure, bootstrap script)
-- Marawan (AI automation): 4h (automation helper scripts for inventory generation)
-- Meslmany: 3h (bootstrap usability feedback)
+| Task | Role | Estimate | Calculation |
+|------|------|----------|-------------|
+| Repository scaffold & Ansible structure & bootstrap script | Alaa | 23h | Combined tasks |
+| ADR template and documentation | Xamek | 3h | One-time task |
+| Automation helper scripts | Marawan | 4h | One-time task |
+| Bootstrap validation | Meslmany | 3h | One-time task |
 
 **Deliverables:**
 - ✅ GitLab repository: `iac-deployment-automation`
@@ -838,17 +402,12 @@ Each batch follows the same pattern:
 **Focus:** First infrastructure roles
 
 **Tasks:**
-- Create `geoserver` role (Java 11, Tomcat 9, GeoServer 2.23)
-- Install and configure GeoServer with governance logging
-- Create `firewall` role (UFW/firewalld)
-- Configure firewall rules for all services
-- Document installation steps
-- Write ADR-001: GeoServer Deployment Strategy
 
-**Team:**
-- Alaa: 16-18h (role development, testing)
-- Marawan (AI automation): 3h (automated testing scripts)
-- Meslmany: 4h (deployment validation, documentation)
+| Task | Role | Estimate | Calculation |
+|------|------|----------|-------------|
+| GeoServer role + Firewall role & configuration | Alaa | 18h | 12h + 6h |
+| Automated testing scripts | Marawan | 3h | One-time task |
+| Deployment validation | Meslmany | 4h | One-time task |
 
 **Deliverables:**
 - ✅ `roles/geoserver/` (127 lines of Ansible YAML)
@@ -856,28 +415,18 @@ Each batch follows the same pattern:
 - ✅ ADR-001 written
 - ✅ Installation guide created
 
-**Validation:**
-- GeoServer accessible on port 8080
-- Firewall rules verified with `ufw status`
-- Sample workspace created successfully
-
 ---
 
 #### Week 3: PostgreSQL & Security
 **Focus:** Database and security hardening
 
 **Tasks:**
-- Create `postgres_postgis` role (PostgreSQL 14 + PostGIS 3.3)
-- Configure backup strategy (pg_dump automation)
-- Create `security_hardening` role (CIS benchmarks)
-- Add compliance tags and performance tuning
-- Validate DB access, schema, and backup restore
-- Write ADR-002: Database & Backup Strategy
 
-**Team:**
-- Alaa: 16-18h (role development, backup scripts)
-- Marawan (AI automation): 3h (backup automation scripts)
-- Meslmany: 4h (DB validation, backup testing)
+| Task | Role | Estimate | Calculation |
+|------|------|----------|-------------|
+| PostgreSQL & PostGIS setup + Security hardening & CIS benchmarks | Alaa | 18h | 10h + 8h |
+| Backup automation scripts | Marawan | 3h | One-time task |
+| DB validation and backup testing | Meslmany | 4h | One-time task |
 
 **Deliverables:**
 - ✅ `roles/postgres_postgis/` (156 lines)
@@ -885,29 +434,18 @@ Each batch follows the same pattern:
 - ✅ Backup script: `pg_backup.sh`
 - ✅ ADR-002 written
 
-**Validation:**
-- PostgreSQL 14.10 + PostGIS 3.3.4 installed
-- Backup/restore tested successfully
-- CIS benchmark score: >90/100
-
 ---
 
 #### Week 4: Keycloak & Docker Swarm
 **Focus:** Identity management and container orchestration
 
 **Tasks:**
-- Create `keycloak_install` role (Keycloak 21.x on Docker)
-- Configure Keycloak DB backend (PostgreSQL)
-- Create `docker_swarm` role (Docker 24.x)
-- Configure overlay networks and secrets management
-- Log join token and container metadata
-- Validate Keycloak access and Docker setup
-- Write ADR-003: Swarm Orchestration & Keycloak Architecture
 
-**Team:**
-- Alaa: 18-20h (role development, Docker configuration)
-- Marawan (AI automation): 3h (container health check scripts)
-- Meslmany: 4h (Keycloak validation, Docker testing)
+| Task | Role | Estimate | Calculation |
+|------|------|----------|-------------|
+| Docker & Swarm configuration + Keycloak installation & setup | Alaa | 22h | 12h + 10h |
+| Container health check scripts | Marawan | 3h | One-time task |
+| Keycloak and Docker validation | Meslmany | 4h | One-time task |
 
 **Deliverables:**
 - ✅ `roles/keycloak_install/` (134 lines)
@@ -915,31 +453,18 @@ Each batch follows the same pattern:
 - ✅ Docker Compose file for Keycloak
 - ✅ ADR-003 written
 
-**Validation:**
-- Keycloak admin console accessible
-- PostgreSQL backend connected
-- Docker Swarm initialized
-- Overlay network functional
-
 ---
 
 #### Week 5: Application Services & Reverse Proxy
 **Focus:** App containers and SSL/TLS
 
 **Tasks:**
-- Create `docker_containers` role (backend, frontend, n8n)
-- Create `db_config` role (schemas, users, config loader)
-- Create `reverse_proxy` role (Nginx with SSL/TLS)
-- Configure Let's Encrypt automation
-- Governance logging for all configs
-- Define config keys, test schema, and SSL certificates
-- Create config validation scripts
-- Write ADR-004: SSL/TLS & Reverse Proxy Strategy
 
-**Team:**
-- Alaa: 18-20h (role development, SSL configuration)
-- Marawan (AI automation): 5h (config validation scripts)
-- Meslmany: 5h (SSL validation, config testing)
+| Task | Role | Estimate | Calculation |
+|------|------|----------|-------------|
+| Application containers + Nginx & SSL/TLS configuration | Alaa | 18h | 8h + 10h |
+| Config validation scripts | Marawan | 5h | One-time task |
+| SSL validation and config testing | Meslmany | 5h | One-time task |
 
 **Deliverables:**
 - ✅ `roles/docker_containers/` (187 lines)
@@ -949,31 +474,18 @@ Each batch follows the same pattern:
 - ✅ SQL initialization scripts
 - ✅ ADR-004 written
 
-**Validation:**
-- All containers running and healthy
-- SSL certificate valid (Let's Encrypt)
-- SSL Labs score: A+
-- Database schemas created
-- Config table loaded with 47 settings
-
 ---
 
 #### Week 6: GeoServer Layers
 **Focus:** Spatial data management
 
 **Tasks:**
-- Create `geoserver_layers` role
-- Upload shapefiles and GeoTIFFs via REST API
-- Create layer validation scripts
-- Define layer naming conventions and SLD management
-- Provide sample data and validate layers
-- Create data validation automation
-- Write ADR-005: Layer & Data Management Strategy
 
-**Team:**
-- Alaa: 14-16h (role development, REST API integration)
-- Marawan (AI automation): 4h (data validation automation)
-- Meslmany: 5h (sample data preparation, layer validation)
+| Task | Role | Estimate | Calculation |
+|------|------|----------|-------------|
+| GeoServer layers & REST API | Alaa | 13h | One-time task |
+| Layer validation scripts | Marawan | 4h | One-time task |
+| Sample data preparation and layer validation | Meslmany | 5h | One-time task |
 
 **Deliverables:**
 - ✅ `roles/geoserver_layers/` (143 lines)
@@ -982,30 +494,18 @@ Each batch follows the same pattern:
 - ✅ Validation script: `validate_layers.py`
 - ✅ ADR-005 written
 
-**Validation:**
-- 5 layers published successfully
-- WMS/WFS endpoints responding
-- Layer preview working in GeoServer UI
-- Metadata properly set
-
 ---
 
 #### Week 7: Keycloak Configuration
 **Focus:** Identity and access management
 
 **Tasks:**
-- Create `keycloak_config` role
-- Configure realm, users, roles, and clients
-- Set up SSO integration (SAML 2.0)
-- Configure role-based access control (RBAC)
-- Define user/role templates and test login flows
-- Create user provisioning automation
-- Write ADR-006: Identity & Access Management Strategy
 
-**Team:**
-- Alaa: 14-16h (role development, SSO configuration)
-- Marawan (AI automation): 4h (user provisioning automation)
-- Meslmany: 4h (user templates, login testing)
+| Task | Role | Estimate | Calculation |
+|------|------|----------|-------------|
+| Keycloak realm & SSO configuration | Alaa | 11h | One-time task |
+| User provisioning automation | Marawan | 4h | One-time task |
+| User templates and login testing | Meslmany | 4h | One-time task |
 
 **Deliverables:**
 - ✅ `roles/keycloak_config/` (178 lines)
@@ -1014,32 +514,18 @@ Each batch follows the same pattern:
 - ✅ Provisioning script: `provision_users.py`
 - ✅ ADR-006 written
 
-**Validation:**
-- Realm `gis_platform` created
-- 4 roles, 5 test users created
-- 3 clients configured
-- SSO ready (SAML 2.0)
-- RBAC enforced
-
 ---
 
 #### Week 8: Monitoring & Logging
 **Focus:** Observability and ADR review
 
 **Tasks:**
-- Create `monitoring` role (Prometheus + Grafana)
-- Create `logging` role (Loki or ELK stack)
-- Configure alerting rules and dashboards
-- Create `adr_logger` role
-- GitLab CI ADR compliance check
-- Review monitoring dashboards and alerts
-- Review and finalize all ADRs (ADR-000 to ADR-006)
-- Write ADR-007: Monitoring & Logging Strategy
 
-**Team:**
-- Alaa: 18-20h (monitoring setup, dashboard creation)
-- Marawan (AI automation): 6h (ADR review and finalization)
-- Meslmany: 4h (dashboard review, alert testing)
+| Task | Role | Estimate | Calculation |
+|------|------|----------|-------------|
+| Monitoring stack + ADR logger & CI integration | Alaa | 21h | 16h + 5h |
+| ADR review and finalization | Marawan | 6h | One-time task |
+| Dashboard review and alert testing | Meslmany | 4h | One-time task |
 
 **Deliverables:**
 - ✅ `roles/monitoring/` (234 lines)
@@ -1050,30 +536,18 @@ Each batch follows the same pattern:
 - ✅ ADR-007 written
 - ✅ All ADRs (000-007) reviewed and approved
 
-**Validation:**
-- Prometheus scraping 15 targets
-- Grafana dashboards displaying data
-- Alerts configured and tested
-- Logs searchable in Loki
-
 ---
 
 #### Week 9: Testing & Backup
 **Focus:** Comprehensive testing and backup automation
 
 **Tasks:**
-- Create `backup_restore` role (automated backups for DB, configs, data)
-- Create `verify.yml` playbook
-- Add Molecule tests for all roles (80% coverage target)
-- CI test stage integration
-- Define test cases and validate backup/restore procedures
-- Create test automation scripts
-- Write ADR-008: Testing & Backup Strategy
 
-**Team:**
-- Alaa: 18-20h (backup role, Molecule tests)
-- Marawan (AI automation): 5h (test automation scripts)
-- Meslmany: 5h (test case definition, DR testing)
+| Task | Role | Estimate | Calculation |
+|------|------|----------|-------------|
+| Backup & restore automation + Molecule tests & CI integration | Alaa | 18h | 12h + 6h |
+| Test automation scripts | Marawan | 5h | One-time task |
+| Test case definition and DR testing | Meslmany | 5h | One-time task |
 
 **Deliverables:**
 - ✅ `roles/backup_restore/` (198 lines)
@@ -1082,30 +556,18 @@ Each batch follows the same pattern:
 - ✅ Backup scripts for all services
 - ✅ ADR-008 written
 
-**Validation:**
-- All Molecule tests passing
-- Backup/restore tested successfully
-- DR drill: 47-minute recovery time
-- Test coverage: 84%
-
 ---
 
 #### Week 10: Master Playbook & CI/CD
 **Focus:** Deployment automation and pipeline
 
 **Tasks:**
-- Assemble `deploy.yml` master playbook
-- Create environment-specific configs (dev/staging/prod)
-- Configure GitLab CI/CD pipeline (build, test, deploy stages)
-- Add approval gates and rollback procedures
-- Test full deployment on staging environment
-- Create deployment validation scripts
-- Write ADR-009: CI/CD & Deployment Strategy
 
-**Team:**
-- Alaa: 16-18h (master playbook, CI/CD pipeline)
-- Marawan (AI automation): 5h (validation scripts)
-- Meslmany: 5h (staging deployment testing)
+| Task | Role | Estimate | Calculation |
+|------|------|----------|-------------|
+| Master playbooks + CI/CD pipeline & approval gates | Alaa | 19h | 12h + 7h |
+| Deployment validation scripts | Marawan | 5h | One-time task |
+| Staging deployment testing | Meslmany | 5h | One-time task |
 
 **Deliverables:**
 - ✅ `playbooks/deploy.yml` (234 lines)
@@ -1115,30 +577,18 @@ Each batch follows the same pattern:
 - ✅ Deployment scripts
 - ✅ ADR-009 written
 
-**Validation:**
-- Staging deployment: 43 minutes
-- All services healthy
-- Rollback tested: 8 minutes
-- CI/CD pipeline working
-
 ---
 
 #### Week 11: DR Testing & Documentation
 **Focus:** Disaster recovery and comprehensive docs
 
 **Tasks:**
-- Configure n8n webhook flows (deployment notifications, governance updates)
-- Create disaster recovery testing procedures
-- Run performance benchmarking (load testing with JMeter)
-- Security audit and vulnerability scanning
-- Create user documentation and runbooks
-- Create operator documentation and troubleshooting guides
-- Write ADR-010: DR & Performance Strategy
 
-**Team:**
-- Alaa: 16-18h (n8n, DR procedures, performance testing)
-- Marawan (AI automation): 6h (operator documentation, troubleshooting guides)
-- Meslmany: 6h (user documentation, runbooks)
+| Task | Role | Estimate | Calculation |
+|------|------|----------|-------------|
+| n8n webhooks + JMeter & performance tests + Security audit | Alaa | 18h | 6h + 10h + 2h |
+| Operator documentation | Marawan | 6h | One-time task |
+| User documentation | Meslmany | 6h | One-time task |
 
 **Deliverables:**
 - ✅ 5 n8n workflows
@@ -1150,31 +600,18 @@ Each batch follows the same pattern:
 - ✅ Troubleshooting guide (34 pages)
 - ✅ ADR-010 written
 
-**Validation:**
-- DR drill: 52-minute recovery
-- Performance: 1,026 req/sec
-- Security audit: 94/100 score
-- All documentation reviewed
-
 ---
 
 #### Week 12: Final Integration & Handover
 **Focus:** Production readiness and SE handover
 
 **Tasks:**
-- Final integration testing (end-to-end)
-- SE-ready packaging (README, quick-start guide)
-- Create architecture diagrams (network, component, deployment)
-- Final governance review and compliance check
-- Knowledge-base update (RAGFlow)
-- SE final acceptance testing and sign-off
-- AI Dev final automation polish and documentation
-- Project retrospective and handover
 
-**Team:**
-- Alaa: 14-16h (integration testing, packaging)
-- Marawan (AI automation): 5h (final documentation, automation polish)
-- Meslmany: 6h (acceptance testing, sign-off)
+| Task | Role | Estimate | Calculation |
+|------|------|----------|-------------|
+| README, guides & diagrams + E2E testing | Alaa | 22h | 10h + 12h |
+| Final polish & packaging | Marawan | 5h | One-time task |
+| SE acceptance testing | Meslmany | 6h | One-time task |
 
 **Deliverables:**
 - ✅ Complete README with quick-start
@@ -1184,19 +621,14 @@ Each batch follows the same pattern:
 - ✅ Retrospective notes
 - ✅ Handover document
 - ✅ **SE ACCEPTANCE SIGN-OFF**
-
-**Validation:**
-- E2E tests: 47/47 passed
-- SE deployed 3 times successfully
-- All documentation accurate
-- **🎉 PROJECT COMPLETE**
+- ✅ **🎉 PROJECT COMPLETE**
 
 ---
 
 ### IaC Post-Week 12: Support Mode
 
-**Weeks 13-23:**
-- Alaa: 4-8h/week support and maintenance
+**Weeks 13-15:**
+- Alaa: 8h/week support and maintenance
 - Deploy to 3+ client sites
 - Gather feedback and iterate
 - Minor enhancements and bug fixes
@@ -1204,11 +636,50 @@ Each batch follows the same pattern:
 
 ---
 
+### Task Estimates
+
+| # | Task | Role | Estimate |
+|---|------|------|----------|
+| 1 | Repository setup & Ansible structure | Alaa | 23h |
+| 2 | ADR templates & documentation | Xamek | 3h |
+| 3 | Automation helper scripts | Marawan | 4h |
+| 4 | Bootstrap validation | Meslmany | 3h |
+| 5 | GeoServer role (Java, Tomcat, GeoServer) | Alaa | 12h |
+| 6 | Firewall role & configuration | Alaa | 6h |
+| 7 | PostgreSQL & PostGIS setup | Alaa | 10h |
+| 8 | Security hardening & CIS benchmarks | Alaa | 8h |
+| 9 | Docker & Swarm configuration | Alaa | 12h |
+| 10 | Keycloak installation & setup | Alaa | 10h |
+| 11 | Application containers (backend/frontend) | Alaa | 8h |
+| 12 | Nginx & SSL/TLS configuration | Alaa | 10h |
+| 13 | GeoServer layers & REST API | Alaa | 13h |
+| 14 | Keycloak realm & SSO configuration | Alaa | 11h |
+| 15 | Monitoring stack (Prometheus, Grafana, Loki) | Alaa | 16h |
+| 16 | ADR logger & CI integration | Alaa | 5h |
+| 17 | Backup & restore automation | Alaa | 12h |
+| 18 | Automated testing scripts | Marawan | 13h |
+| 19 | Molecule tests & CI integration | Alaa | 6h |
+| 20 | Infrastructure validation | Meslmany | 18h |
+| 21 | DR testing procedures | Meslmany | 5h |
+| 22 | Master playbooks (deploy/rollback) | Alaa | 12h |
+| 23 | CI/CD pipeline & approval gates | Alaa | 7h |
+| 24 | Deployment validation scripts | Marawan | 5h |
+| 25 | Staging deployment testing | Meslmany | 5h |
+| 26 | n8n webhooks & notifications | Alaa | 6h |
+| 27 | JMeter setup & performance tests | Alaa | 10h |
+| 28 | Security audit | Alaa | 2h |
+| 29 | Operator & user documentation | Marawan + Meslmany | 12h |
+| 30 | README, guides & diagrams | Alaa | 10h |
+| 31 | Final polish & packaging | Marawan | 5h |
+| 32 | E2E testing & SE acceptance | Alaa + Meslmany | 12h |
+
+---
+
 ## Workstream 3: Automation & Tooling - Detailed Plan
 
 ### Overview
 **Duration:** 15 weeks (ongoing)  
-**Team:** Marawan (AI automation lead), Mounir (Week 1-2 for example plugin)  
+**Team:** Marawan (AI automation lead), Xamek (Week 1 architecture)  
 **Objective:** Automation framework supporting both workstreams
 
 ### Phase 1: Foundation (Weeks 1-2)
@@ -1217,17 +688,10 @@ Each batch follows the same pattern:
 **Focus:** Design automation framework
 
 **Tasks:**
-- Design automation architecture
-- Define paved roads standards
-- Plan CI/CD integration points
-- Create automation roadmap
-- Design compliance checking framework
 
-**Team:**
-- Xamek: 8h (architecture design)
-- Xamek: 4h (paved roads standards)
-- Mounir: 8h (begin example plugin)
-- Marawan (AI automation): 4h (helper scripts planning)
+| Task | Role | Estimate | Calculation |
+|------|------|----------|-------------|
+| Design automation architecture + Define paved roads standards | Xamek | 12h | 8h + 4h |
 
 **Deliverables:**
 - ✅ Automation architecture document
@@ -1240,42 +704,10 @@ Each batch follows the same pattern:
 **Focus:** Build and deploy automation tools
 
 **Tasks:**
-- **Paved Roads Compliance Script**
-  - Automated code style checking
-  - Architecture pattern validation
-  - Naming convention enforcement
-  - Import structure validation
-  
-- **User Story Coverage Automation**
-  - Parse user stories for requirements
-  - Map requirements to code implementation
-  - Generate coverage reports
-  - Flag missing implementations
 
-- **Code Review Automation**
-  - Automated PR checks
-  - Code quality metrics
-  - Test coverage validation
-  - Documentation completeness check
-
-- **Figma Compliance Checking**
-  - Compare Figma designs to implemented UI
-  - Validate component usage
-  - Check design system adherence
-  - Generate compliance reports
-
-- **Example Plugin (Mounir)**
-  - Complete reference implementation
-  - Chakra UI best practices
-  - Penta Grid integration
-  - Penta Form Builder usage
-  - Sample configuration
-  - Comprehensive documentation
-
-**Team:**
-- Marawan: 24h (automation scripts + CI/CD integration)
-- Mounir: 16h (complete example plugin)
-- Marawan (AI automation): Ongoing (automation helpers)
+| Task | Role | Estimate | Calculation |
+|------|------|----------|-------------|
+| Paved roads script + User story coverage + Code review automation + Figma compliance + CI/CD integration | Marawan | 32h | 8h + 6h + 6h + 4h + 8h |
 
 **Deliverables:**
 - ✅ `scripts/paved_roads_check.py` (automated compliance)
@@ -1283,106 +715,52 @@ Each batch follows the same pattern:
 - ✅ `scripts/code_review_automation.py` (PR automation)
 - ✅ `scripts/figma_compliance_check.py` (design validation)
 - ✅ `.gitlab-ci.yml` (CI/CD integration for all checks)
-- ✅ Example plugin complete with full documentation
 - ✅ Paved roads documentation published
-
-**Validation:**
-- All scripts integrated into GitLab CI
-- Example plugin passes all automated checks
-- CI pipeline runs successfully
-- Documentation complete and accessible
 
 ---
 
-### Phase 2: Continuous Support (Weeks 3-23)
+### Phase 2: Continuous Support (Weeks 3-15)
 
 #### Ongoing Activities
 
-**Weekly Maintenance (Marawan: 4-6h/week):**
+**Tasks:**
+
+| Task | Role | Estimate | Calculation |
+|------|------|----------|-------------|
+| Automation support | Marawan | 6h/week | Weekly recurring |
+
+**Activities:**
 - Monitor CI/CD pipeline health
 - Update automation scripts based on feedback
 - Add new compliance rules as needed
 - Troubleshoot automation failures
+- Support plugin and IaC workstreams
 - Optimize script performance
+- Generate compliance reports
 
-**Plugin Support (Weeks 3-22):**
-- Ensure automation works for each plugin batch
-- Update scripts for new patterns discovered
-- Generate compliance reports for each batch
-- Support developers with automation issues
-
-**IaC Support (Weeks 3-12):**
-- Integrate IaC-specific automation
-- Ansible linting and validation
-- Infrastructure compliance checking
-- Deployment automation enhancements
-
-**Continuous Improvements:**
-- Add new automated checks based on code review patterns
-- Enhance user story coverage detection
-- Improve Figma compliance accuracy
-- Optimize CI/CD pipeline performance
-- Add automated performance regression detection
+**Deliverables:**
+- ✅ Weekly automation health reports
+- ✅ Script updates and improvements
+- ✅ Compliance reports for each plugin batch
+- ✅ Continuous CI/CD optimization
 
 ---
 
-### Automation Deliverables Summary
+### Task Estimates
 
-| Deliverable | Week | Owner | Purpose |
-|-------------|------|-------|---------|
-| Automation architecture | 1 | Marawan | Framework design |
-| Paved roads compliance script | 2 | Marawan | Code standards enforcement |
-| User story coverage automation | 2 | Marawan | Requirement tracking |
-| Code review automation | 2 | Marawan | PR quality gates |
-| Figma compliance checking | 2 | Marawan | Design adherence |
-| Example plugin | 2 | Mounir | Reference implementation |
-| CI/CD pipeline integration | 2 | Marawan | Automated checks |
-| Ongoing maintenance | 3-23 | Marawan | Support & enhancement |
-
----
-
-### Automation Success Metrics
-
-| Metric | Target | Measurement |
-|--------|--------|-------------|
-| CI/CD pipeline success rate | >90% | GitLab statistics |
-| Automated test pass rate | >95% | Test reports |
-| Code review automation coverage | 100% | Script logs |
-| ADR compliance | 100% | CI checks |
-| Paved roads compliance | >90% | Automated scans |
-| False positive rate | <5% | Manual review |
-| Pipeline execution time | <10 min | GitLab metrics |
-| Developer satisfaction | >4/5 | Survey |
+| # | Task | Role | Estimate |
+|---|------|------|----------|
+| 1 | Design automation architecture | Xamek | 8h |
+| 2 | Define paved roads standards | Xamek | 4h |
+| 3 | Create paved roads script | Marawan | 8h |
+| 4 | Create user story coverage script | Marawan | 6h |
+| 5 | Create code review automation | Marawan | 6h |
+| 6 | Create Figma compliance script | Marawan | 4h |
+| 7 | Integrate CI/CD | Marawan | 8h |
+| 8 | Automation support | Marawan | 6h |
 
 ---
 
-### Automation Tools & Technologies
-
-**Languages:**
-- Python 3.10+ (automation scripts)
-- Bash (CI/CD integration)
-- JavaScript (Figma API integration)
-
-**Libraries:**
-- `ast` (Python AST parsing for code analysis)
-- `pytest` (testing framework)
-- `requests` (API calls)
-- `jinja2` (report generation)
-- `pyyaml` (config parsing)
-
-**CI/CD:**
-- GitLab CI/CD
-- GitLab API for automation
-- Webhooks for notifications
-
-**Quality Tools:**
-- ESLint (JavaScript linting)
-- Prettier (code formatting)
-- SonarQube (code quality)
-- Jest (unit testing)
-- Cypress (E2E testing)
-
----
 
 ## IaC Deployment Implementation Specification
 
