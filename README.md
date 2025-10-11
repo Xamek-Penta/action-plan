@@ -1,4 +1,5 @@
 # Engineering Department Q1-Q2 2026 Action Plan
+
 ## Comprehensive 4-Month Strategic Roadmap
 
 **Planning Period:** October 2025 - February 2026 (15 weeks)  
@@ -11,39 +12,84 @@
 
 ## Table of Contents
 
-- [Executive Summary](#executive-summary)
-- [Strategic Objectives](#strategic-objectives)
-  - [Primary Goals](#primary-goals)
-- [Team Structure & Roles](#team-structure--roles)
-  - [Engineering Team](#engineering-team-10-people)
-  - [Products Team](#products-team-4-people)
-  - [Delivery Team](#delivery-team-1-person)
-- [Parallel Workstreams](#parallel-workstreams)
-  - [Workstream 1: Plugin Handover](#workstream-1-plugin-handover-weeks-1-15)
-  - [Workstream 2: IaC Deployment](#workstream-2-iac-deployment-weeks-1-12)
-  - [Workstream 3: Automation & Tooling](#workstream-3-automation--tooling-ongoing)
-- [Workstream 1: Plugin Handover - Detailed Plan](#workstream-1-plugin-handover---detailed-plan)
-  - [Overview](#overview)
-  - [Plugin List](#plugin-list)
-  - [Weeks 1-2: Preparation Phase](#weeks-1-2-preparation-phase)
-  - [Batch Cycle Pattern](#batch-cycle-pattern-2-weeks-per-batch)
-  - [Week 15: Final Handover](#week-15-final-handover)
-  - [Task Estimates](#task-estimates)
-- [Workstream 2: IaC Deployment - Detailed Plan](#workstream-2-iac-deployment---detailed-plan)
-  - [Overview](#overview-1)
-  - [Week-by-Week Breakdown](#week-by-week-breakdown)
-  - [IaC Post-Week 12: Support Mode](#iac-post-week-12-support-mode)
-  - [Task Estimates](#task-estimates-1)
-  - [Implementation Specification](#implementation-specification)
-- [Workstream 3: Automation & Tooling - Detailed Plan](#workstream-3-automation--tooling---detailed-plan)
-  - [Overview](#overview-2)
-  - [Phase 1: Foundation](#phase-1-foundation-weeks-1-2)
-  - [Phase 2: Continuous Support](#phase-2-continuous-support-weeks-3-15)
-  - [Task Estimates](#task-estimates-2)
-  - [Pipeline Specification](#pipeline-specification)
-- [Appendix: Detailed Specifications](#appendix-detailed-specifications)
+- [Engineering Department Q1-Q2 2026 Action Plan](#engineering-department-q1-q2-2026-action-plan)
+  - [Comprehensive 4-Month Strategic Roadmap](#comprehensive-4-month-strategic-roadmap)
+  - [Table of Contents](#table-of-contents)
+  - [Executive Summary](#executive-summary)
+  - [Strategic Objectives](#strategic-objectives)
+    - [Primary Goals](#primary-goals)
+  - [Team Structure \& Roles](#team-structure--roles)
+    - [Engineering Team (10 people)](#engineering-team-10-people)
+    - [Products Team (4 people)](#products-team-4-people)
+    - [Delivery Team (1 person)](#delivery-team-1-person)
+  - [Parallel Workstreams](#parallel-workstreams)
+    - [Workstream 1: Plugin Handover (Weeks 1-15)](#workstream-1-plugin-handover-weeks-1-15)
+    - [Workstream 2: IaC Deployment (Weeks 1-12)](#workstream-2-iac-deployment-weeks-1-12)
+    - [Workstream 3: Automation \& Tooling (Ongoing)](#workstream-3-automation--tooling-ongoing)
+  - [Workstream 1: Plugin Handover - Detailed Plan](#workstream-1-plugin-handover---detailed-plan)
+    - [Workstream 1 Overview](#workstream-1-overview)
+    - [Plugin List](#plugin-list)
+    - [Weeks 1-2: Preparation Phase](#weeks-1-2-preparation-phase)
+    - [Batch Cycle Pattern (2 weeks per batch)](#batch-cycle-pattern-2-weeks-per-batch)
+      - [Week 1 (Implementation)](#week-1-implementation)
+      - [Week 2 (Testing \& QA)](#week-2-testing--qa)
+    - [Week 15: Final Handover](#week-15-final-handover)
+    - [Workstream 1 Task Estimates](#workstream-1-task-estimates)
+  - [Workstream 2: IaC Deployment - Detailed Plan](#workstream-2-iac-deployment---detailed-plan)
+    - [Workstream 2 Overview](#workstream-2-overview)
+    - [Week-by-Week Breakdown](#week-by-week-breakdown)
+      - [Week 1: Foundation Setup](#week-1-foundation-setup)
+      - [Week 2: GeoServer \& Firewall](#week-2-geoserver--firewall)
+      - [Week 3: PostgreSQL \& Security](#week-3-postgresql--security)
+      - [Week 4: Keycloak \& Docker Swarm](#week-4-keycloak--docker-swarm)
+      - [Week 5: Application Services \& Reverse Proxy](#week-5-application-services--reverse-proxy)
+      - [Week 6: GeoServer Layers](#week-6-geoserver-layers)
+      - [Week 7: Keycloak Configuration](#week-7-keycloak-configuration)
+      - [Week 8: Monitoring \& Logging](#week-8-monitoring--logging)
+      - [Week 9: Testing \& Validation](#week-9-testing--validation)
+      - [Week 10: Master Playbook \& CI/CD](#week-10-master-playbook--cicd)
+      - [Week 11: DR Testing \& Documentation](#week-11-dr-testing--documentation)
+      - [Week 12: Final Integration \& Handover](#week-12-final-integration--handover)
+    - [IaC Post-Week 12: Support Mode](#iac-post-week-12-support-mode)
+    - [Workstream 2 Task Estimates](#workstream-2-task-estimates)
+    - [Implementation Specification](#implementation-specification)
+  - [Workstream 3: Automation \& Tooling - Detailed Plan](#workstream-3-automation--tooling---detailed-plan)
+    - [Workstream 3 Overview](#workstream-3-overview)
+    - [Phase 1: Foundation (Weeks 1-2)](#phase-1-foundation-weeks-1-2)
+      - [Week 1: Architecture \& Design](#week-1-architecture--design)
+      - [Week 2: Implementation \& Integration](#week-2-implementation--integration)
+    - [Phase 2: Continuous Support (Weeks 3-15)](#phase-2-continuous-support-weeks-3-15)
+      - [Ongoing Activities](#ongoing-activities)
+    - [Workstream 3 Task Estimates](#workstream-3-task-estimates)
+    - [Pipeline Specification](#pipeline-specification)
+  - [Appendix: Detailed Specifications](#appendix-detailed-specifications)
   - [IaC Deployment Implementation Specification](#iac-deployment-implementation-specification)
+    - [Strategic Goal](#strategic-goal)
+    - [Modular Ansible Roles](#modular-ansible-roles)
+    - [Repository Structure](#repository-structure)
+    - [GitLab CI/CD Integration](#gitlab-cicd-integration)
+    - [n8n Automation Hooks](#n8n-automation-hooks)
+    - [ADR Framework](#adr-framework)
+    - [Deployment Verification](#deployment-verification)
+    - [SE Deployment Workflow](#se-deployment-workflow)
+    - [Rollback Procedures](#rollback-procedures)
+    - [Monitoring \& Alerting](#monitoring--alerting)
+    - [Security Hardening](#security-hardening)
+    - [Backup Strategy](#backup-strategy)
+    - [Performance Testing with JMeter](#performance-testing-with-jmeter)
+    - [Documentation Deliverables](#documentation-deliverables)
   - [GitLab Automated Delivery Pipeline Specification](#gitlab-automated-delivery-pipeline-specification)
+    - [GitLab Board Columns](#gitlab-board-columns)
+    - [Roles \& Responsibilities](#roles--responsibilities)
+    - [Step 1: PO Creates User Story Document](#step-1-po-creates-user-story-document)
+    - [Step 2: UX Designer Creates \& Updates Figma Design](#step-2-ux-designer-creates--updates-figma-design)
+    - [Step 3: Developer Implementation](#step-3-developer-implementation)
+    - [Step 4: QA Testing](#step-4-qa-testing)
+    - [Step 5: Release \& Deployment](#step-5-release--deployment)
+    - [Reusable Workflows](#reusable-workflows)
+      - [`pr_review_cycle` (n8n sub-workflow)](#pr_review_cycle-n8n-sub-workflow)
+      - [`update_kb` (n8n sub-workflow)](#update_kb-n8n-sub-workflow)
+    - [Validation Scripts (by Marawan)](#validation-scripts-by-marawan)
 
 ---
 
@@ -62,8 +108,10 @@ Develop automation scripts, CI/CD pipelines, and governance frameworks to suppor
 
 **Total Team Size:** 13 people  
 **Total Duration:** 15 weeks (~4 months)  
-**Total Estimated Hours:** 2,800-3,000 hours  
-**Key Milestones:** 
+**Total Estimated Hours:** 2,800-3,000 hours
+
+### Key Milestones
+
 - Week 2: Automation framework & CI/CD pipelines operational
 - Week 12: IaC deployment complete
 - Week 15: All 30 plugins delivered
@@ -75,11 +123,13 @@ Develop automation scripts, CI/CD pipelines, and governance frameworks to suppor
 ### Primary Goals
 
 1. **Enable Self-Service Deployment**
+
    - Solutions Engineers can deploy full infrastructure independently
    - Deployment time: <45 minutes from scratch
    - Zero-touch automation with governance built-in
 
 2. **Modernize Plugin Architecture**
+
    - All 30 plugins refactored with Chakra UI
    - Complete ownership transfer to Products Team
    - Comprehensive documentation and testing
@@ -97,31 +147,31 @@ Develop automation scripts, CI/CD pipelines, and governance frameworks to suppor
 
 ### Engineering Team (10 people)
 
-| Name | Role |
-|------|------|
-| **Xamek** | Chief Architect |
-| **Mounir** | Senior Developer |
-| **Alaa** | DevOps Engineer |
-| **Marawan** | AI Developer |
-| **Omar** | Developer |
-| **Basem** | Developer |
-| **Khadra** | Developer |
-| **Hassan** | Developer |
-| **Samy** | Developer |
+| Name        | Role             |
+| ----------- | ---------------- |
+| **Xamek**   | Chief Architect  |
+| **Mounir**  | Senior Developer |
+| **Alaa**    | DevOps Engineer  |
+| **Marawan** | AI Developer     |
+| **Omar**    | Developer        |
+| **Basem**   | Developer        |
+| **Khadra**  | Developer        |
+| **Hassan**  | Developer        |
+| **Samy**    | Developer        |
 
 ### Products Team (4 people)
 
-| Name | Role |
-|------|------|
-| **Amr** | CTO |
-| **Hajar** | Product Owner |
-| **Menna** | UX Designer |
+| Name            | Role              |
+| --------------- | ----------------- |
+| **Amr**         | CTO               |
+| **Hajar**       | Product Owner     |
+| **Menna**       | UX Designer       |
 | **QA Engineer** | QA Engineer (TBD) |
 
 ### Delivery Team (1 person)
 
-| Name | Role |
-|------|------|
+| Name         | Role               |
+| ------------ | ------------------ |
 | **Meslmany** | Solutions Engineer |
 
 ---
@@ -133,30 +183,33 @@ Develop automation scripts, CI/CD pipelines, and governance frameworks to suppor
 **Objective:** Transfer 30 plugins to Products Team
 
 **Timeline:** 15 weeks (2-week cycles per batch)
+
 - Weeks 1-2: Preparation
 - Weeks 3-14: 6 batches Ã— 2 weeks each
 - Week 15: Final handover
 
 **Team:** 5 developers + Hajar + Menna + Mounir + Xamek + Amr + QA
 
-**Key Deliverables:**
+#### Key Deliverables
+
 - 30 refactored plugins with Chakra UI
 - Complete documentation (user stories, technical docs)
 - Figma designs for all UIs
-
 
 ### Workstream 2: IaC Deployment (Weeks 1-12)
 
 **Objective:** Build production-ready infrastructure automation
 
 **Timeline:** 12 weeks
+
 - Weeks 1-2: Foundation & planning
 - Weeks 3-10: Role development & testing
 - Weeks 11-12: Integration & documentation
 
-**Team:** Alaa + Meslmany + Marawan + Xamek 
+**Team:** Alaa + Meslmany + Marawan + Xamek
 
-**Key Deliverables:**
+#### Key Deliverables
+
 - 17 Ansible roles
 - GitLab CI/CD pipeline
 - JMeter performance tests
@@ -170,7 +223,8 @@ Develop automation scripts, CI/CD pipelines, and governance frameworks to suppor
 
 **Team:** Marawan
 
-**Key Deliverables:**
+#### Key Deliverables
+
 - Paved roads compliance scripts
 - User story coverage automation
 - Code review automation
@@ -181,50 +235,53 @@ Develop automation scripts, CI/CD pipelines, and governance frameworks to suppor
 
 ## Workstream 1: Plugin Handover - Detailed Plan
 
-### Overview
+### Workstream 1 Overview
+
 **Duration:** 15 weeks  
 **Team:** 5 Developers (Omar, Basem, Khadra, Hassan, Samy), Hajar (Product Owner), Menna (UX Designer), Mounir (Code Reviews), Xamek (Technical Reviews), Amr (Code Reviews), QA Engineer, Meslmany (Story Reviews)  
 **Objective:** Transfer 30 plugins to Products Team with Chakra UI refactoring
 
 ### Plugin List
 
-| Developer | Batch 1 (Wk 3-4) | Batch 2 (Wk 5-6) | Batch 3 (Wk 7-8) | Batch 4 (Wk 9-10) | Batch 5 (Wk 11-12) | Batch 6 (Wk 13-14) |
-|-----------|------------------|------------------|------------------|-------------------|--------------------|--------------------|
-| **Omar** | Bookmarks | Measurement | TOC | Inbox | Data Inspector | Go To Point |
-| **Basem** | Identify | Feature Selector | Charts | Cards | Find Nearest | Smart Indoor |
-| **Khadra** | Advanced Search | Sketching | Reporting | Simple Search | Alarms | Classification |
-| **Hassan** | Spatial Search | Fulltext Search | Export PDF | Geometry | Editing | Data Review |
-| **Samy** | Driller | Timeline | Simple Import | Legend | Territory Manager | More Info |
+| Developer  | Batch 1 (Wk 3-4) | Batch 2 (Wk 5-6) | Batch 3 (Wk 7-8) | Batch 4 (Wk 9-10) | Batch 5 (Wk 11-12) | Batch 6 (Wk 13-14) |
+| ---------- | ---------------- | ---------------- | ---------------- | ----------------- | ------------------ | ------------------ |
+| **Omar**   | Bookmarks        | Measurement      | TOC              | Inbox             | Data Inspector     | Go To Point        |
+| **Basem**  | Identify         | Feature Selector | Charts           | Cards             | Find Nearest       | Smart Indoor       |
+| **Khadra** | Advanced Search  | Sketching        | Reporting        | Simple Search     | Alarms             | Classification     |
+| **Hassan** | Spatial Search   | Fulltext Search  | Export PDF       | Geometry          | Editing            | Data Review        |
+| **Samy**   | Driller          | Timeline         | Simple Import    | Legend            | Territory Manager  | More Info          |
 
 ### Weeks 1-2: Preparation Phase
 
-**Focus:** Standards, tools, and example plugin
+#### Focus
 
-**Tasks:**
+Standards, tools, and example plugin
 
+#### Tasks
 
-| Task | Role | Estimate | Calculation |
-|------|------|----------|-------------|
-| **Hajar** | | | |
-| User Story Creation | | 60h | 15 plugins × 4h |
-| **Meslmany** | | | |
-| User Story Review | | 15h | 15 plugins × 1h |
-| **Xamek** | | | |
-| User Story Review | | 15h | 15 plugins × 1h |
-| **Mounir** | | | |
-| User Story Review | | 15h | 15 plugins × 1h |
-| Plugin Review Checklist | | 2h | One-time task |
-| Example Plugin | | 14h | One-time task |
-| Figma Design Review | | 5h | 5 plugins × 1h |
-| **Menna** | | | |
-| Figma Baseline | | 8h | One-time task |
-| Design System Docs | | 6h | One-time task |
-| Figma Designs | | 40h | 5 plugins × 8h |
-| **All Developers** | | | |
-| Chakra Theme Setup | | 8h | One-time task |
-| Linting & CI Setup | | 8h | One-time task |
+| Task                    | Role | Estimate | Calculation     |
+| ----------------------- | ---- | -------- | --------------- |
+| **Hajar**               |      |          |                 |
+| User Story Creation     |      | 60h      | 15 plugins × 4h |
+| **Meslmany**            |      |          |                 |
+| User Story Review       |      | 15h      | 15 plugins × 1h |
+| **Xamek**               |      |          |                 |
+| User Story Review       |      | 15h      | 15 plugins × 1h |
+| **Mounir**              |      |          |                 |
+| User Story Review       |      | 15h      | 15 plugins × 1h |
+| Plugin Review Checklist |      | 2h       | One-time task   |
+| Example Plugin          |      | 14h      | One-time task   |
+| Figma Design Review     |      | 5h       | 5 plugins × 1h  |
+| **Menna**               |      |          |                 |
+| Figma Baseline          |      | 8h       | One-time task   |
+| Design System Docs      |      | 6h       | One-time task   |
+| Figma Designs           |      | 40h      | 5 plugins × 8h  |
+| **All Developers**      |      |          |                 |
+| Chakra Theme Setup      |      | 8h       | One-time task   |
+| Linting & CI Setup      |      | 8h       | One-time task   |
 
-**Deliverables:**
+#### Deliverables
+
 - ✅ Example plugin with Chakra UI, Penta Grid, Penta Form Builder
 - ✅ Plugin review checklist
 - ✅ Figma design system
@@ -239,42 +296,49 @@ Develop automation scripts, CI/CD pipelines, and governance frameworks to suppor
 Each batch follows the same pattern:
 
 #### Week 1 (Implementation)
-**Focus:** Development and design for next batch
 
-**Tasks:**
+#### Focus
 
-| Task | Role | Estimate | Calculation |
-|------|------|----------|-------------|
-| **Hajar** | | | |
-| User Story Creation (next batch) | | 20h | 5 plugins × 4h |
-| **Meslmany** | | | |
-| User Story Review (next batch) | | 5h | 5 plugins × 1h |
-| **Xamek** | | | |
-| User Story Review (next batch) | | 5h | 5 plugins × 1h |
-| **Mounir** | | | |
-| User Story Review (next batch) | | 5h | 5 plugins × 1h |
-| Figma Design Review (next batch) | | 5h | 5 plugins × 1h |
-| Code Review (current batch) | | 5h | 5 plugins × 1h |
-| **Menna** | | | |
-| Figma Designs (next batch) | | 40h | 5 plugins × 8h |
-| **5 Developers** | | | |
-| Plugin Implementation (current batch) | | 210h | 5 plugins × 42h each |
-| **Amr** | | | |
-| Code Review (current batch) | | 5h | 5 plugins × 1h |
+Development and design for next batch
+
+#### Tasks
+
+| Task                                  | Role | Estimate | Calculation          |
+| ------------------------------------- | ---- | -------- | -------------------- |
+| **Hajar**                             |      |          |                      |
+| User Story Creation (next batch)      |      | 20h      | 5 plugins × 4h       |
+| **Meslmany**                          |      |          |                      |
+| User Story Review (next batch)        |      | 5h       | 5 plugins × 1h       |
+| **Xamek**                             |      |          |                      |
+| User Story Review (next batch)        |      | 5h       | 5 plugins × 1h       |
+| **Mounir**                            |      |          |                      |
+| User Story Review (next batch)        |      | 5h       | 5 plugins × 1h       |
+| Figma Design Review (next batch)      |      | 5h       | 5 plugins × 1h       |
+| Code Review (current batch)           |      | 5h       | 5 plugins × 1h       |
+| **Menna**                             |      |          |                      |
+| Figma Designs (next batch)            |      | 40h      | 5 plugins × 8h       |
+| **5 Developers**                      |      |          |                      |
+| Plugin Implementation (current batch) |      | 210h     | 5 plugins × 42h each |
+| **Amr**                               |      |          |                      |
+| Code Review (current batch)           |      | 5h       | 5 plugins × 1h       |
 
 #### Week 2 (Testing & QA)
-**Focus:** Bug fixing and quality assurance
 
-**Tasks:**
+#### Focus
 
-| Task | Role | Estimate | Calculation |
-|------|------|----------|-------------|
-| **QA Engineer** | | | |
-| Plugin Testing | | 30h | 5 plugins × 6h |
-| **5 Developers** | | | |
-| Bug Fixing | | 130h | 5 plugins × 26h each |
+Bug fixing and quality assurance
 
-**Deliverables per Batch:**
+#### Tasks
+
+| Task             | Role | Estimate | Calculation          |
+| ---------------- | ---- | -------- | -------------------- |
+| **QA Engineer**  |      |          |                      |
+| Plugin Testing   |      | 30h      | 5 plugins × 6h       |
+| **5 Developers** |      |          |                      |
+| Bug Fixing       |      | 130h     | 5 plugins × 26h each |
+
+#### Deliverables per Batch
+
 - ✅ 5 plugins refactored with Chakra UI (3 for Batch 6)
 - ✅ 5 Figma designs (3 for Batch 6)
 - ✅ User stories documented
@@ -286,22 +350,25 @@ Each batch follows the same pattern:
 
 ### Week 15: Final Handover
 
-**Focus:** Documentation and knowledge transfer
+#### Focus
 
-**Tasks:**
+Documentation and knowledge transfer
 
-| Task | Role | Estimate | Calculation |
-|------|------|----------|-------------|
-| **All Team** | | | |
-| Compile handover materials | | 50h | Combined effort |
-| Knowledge transfer sessions | | Included | Part of handover |
-| Sign-off and celebration | | Included | Part of handover |
-| **Mounir + Xamek** | | | |
-| Final documentation review | | Included | Part of handover |
-| **Products Team** | | | |
-| Acceptance testing | | Included | Part of handover |
+#### Tasks
 
-**Deliverables:**
+| Task                        | Role | Estimate | Calculation      |
+| --------------------------- | ---- | -------- | ---------------- |
+| **All Team**                |      |          |                  |
+| Compile handover materials  |      | 50h      | Combined effort  |
+| Knowledge transfer sessions |      | Included | Part of handover |
+| Sign-off and celebration    |      | Included | Part of handover |
+| **Mounir + Xamek**          |      |          |                  |
+| Final documentation review  |      | Included | Part of handover |
+| **Products Team**           |      |          |                  |
+| Acceptance testing          |      | Included | Part of handover |
+
+#### Deliverables
+
 - ✅ 30 plugins delivered
 - ✅ Complete technical documentation
 - ✅ All Figma designs
@@ -310,33 +377,34 @@ Each batch follows the same pattern:
 
 ---
 
-### Task Estimates
+### Workstream 1 Task Estimates
 
-| Role | Task | Estimate |
-|------|------|----------|
-| **Hajar** | Create user story | 4h |
-| **Meslmany** | Review user story | 1h |
-| **Xamek** | Review user story | 1h |
-| **Mounir** | Review user story | 1h |
-| | Define plugin review checklist | 2h |
-| | Create example plugin | 14h |
-| | Review Figma design | 1h |
-| | Code review | 1h |
-| **Amr** | Code review | 1h |
-| **Menna** | Establish Figma baseline | 8h |
-| | Create design system docs | 6h |
-| | Create Figma design | 8h |
-| **Developer** | Setup Chakra theme | 8h |
-| | Setup linting & CI | 8h |
-| | Implement plugin | 42h |
-| | Bug fixing | 26h |
-| **QA Engineer** | Test plugin | 6h |
+| Role            | Task                           | Estimate |
+| --------------- | ------------------------------ | -------- |
+| **Hajar**       | Create user story              | 4h       |
+| **Meslmany**    | Review user story              | 1h       |
+| **Xamek**       | Review user story              | 1h       |
+| **Mounir**      | Review user story              | 1h       |
+|                 | Define plugin review checklist | 2h       |
+|                 | Create example plugin          | 14h      |
+|                 | Review Figma design            | 1h       |
+|                 | Code review                    | 1h       |
+| **Amr**         | Code review                    | 1h       |
+| **Menna**       | Establish Figma baseline       | 8h       |
+|                 | Create design system docs      | 6h       |
+|                 | Create Figma design            | 8h       |
+| **Developer**   | Setup Chakra theme             | 8h       |
+|                 | Setup linting & CI             | 8h       |
+|                 | Implement plugin               | 42h      |
+|                 | Bug fixing                     | 26h      |
+| **QA Engineer** | Test plugin                    | 6h       |
 
 ---
 
 ## Workstream 2: IaC Deployment - Detailed Plan
 
-### Overview
+### Workstream 2 Overview
+
 **Duration:** 12 weeks  
 **Team:** Alaa (DevOps lead), Marawan (AI automation), Meslmany (validation)  
 **Objective:** Production-ready infrastructure automation
@@ -344,22 +412,26 @@ Each batch follows the same pattern:
 ### Week-by-Week Breakdown
 
 #### Week 1: Foundation Setup
-**Focus:** Repository structure and planning
 
-**Tasks:**
+#### Focus
 
-| Task | Role | Estimate | Calculation |
-|------|------|----------|-------------|
-| **Alaa** | | | |
-| Repository scaffold & Ansible structure & bootstrap script | | 23h | Combined tasks |
-| **Xamek** | | | |
-| ADR template and documentation | | 3h | One-time task |
-| **Marawan** | | | |
-| Automation helper scripts | | 4h | One-time task |
-| **Meslmany** | | | |
-| Bootstrap validation | | 3h | One-time task |
+Repository structure and planning
 
-**Deliverables:**
+#### Tasks
+
+| Task                                                       | Role | Estimate | Calculation    |
+| ---------------------------------------------------------- | ---- | -------- | -------------- |
+| **Alaa**                                                   |      |          |                |
+| Repository scaffold & Ansible structure & bootstrap script |      | 23h      | Combined tasks |
+| **Xamek**                                                  |      |          |                |
+| ADR template and documentation                             |      | 3h       | One-time task  |
+| **Marawan**                                                |      |          |                |
+| Automation helper scripts                                  |      | 4h       | One-time task  |
+| **Meslmany**                                               |      |          |                |
+| Bootstrap validation                                       |      | 3h       | One-time task  |
+
+#### Deliverables
+
 - ✅ GitLab repository: `iac-deployment-automation`
 - ✅ Complete directory structure
 - ✅ Bootstrap script tested on Ubuntu 22.04
@@ -369,20 +441,24 @@ Each batch follows the same pattern:
 ---
 
 #### Week 2: GeoServer & Firewall
-**Focus:** First infrastructure roles
 
-**Tasks:**
+#### Focus
 
-| Task | Role | Estimate | Calculation |
-|------|------|----------|-------------|
-| **Alaa** | | | |
-| GeoServer role + Firewall role & configuration | | 18h | 12h + 6h |
-| **Marawan** | | | |
-| Automated testing scripts | | 13h | One-time task |
-| **Meslmany** | | | |
-| Deployment validation | | 4h | One-time task |
+First infrastructure roles
 
-**Deliverables:**
+#### Tasks
+
+| Task                                           | Role | Estimate | Calculation   |
+| ---------------------------------------------- | ---- | -------- | ------------- |
+| **Alaa**                                       |      |          |               |
+| GeoServer role + Firewall role & configuration |      | 18h      | 12h + 6h      |
+| **Marawan**                                    |      |          |               |
+| Automated testing scripts                      |      | 13h      | One-time task |
+| **Meslmany**                                   |      |          |               |
+| Deployment validation                          |      | 4h       | One-time task |
+
+#### Deliverables
+
 - ✅ `roles/geoserver/` (127 lines of Ansible YAML)
 - ✅ `roles/firewall/` (68 lines of Ansible YAML)
 - ✅ ADR-001 written
@@ -391,18 +467,22 @@ Each batch follows the same pattern:
 ---
 
 #### Week 3: PostgreSQL & Security
-**Focus:** Database and security hardening
 
-**Tasks:**
+#### Focus
 
-| Task | Role | Estimate | Calculation |
-|------|------|----------|-------------|
-| **Alaa** | | | |
-| PostgreSQL & PostGIS setup + DB config role + Security hardening & CIS benchmarks + Backup automation scripts | | 30h | 10h + 4h + 8h + 8h |
-| **Meslmany** | | | |
-| DB validation and backup testing | | 4h | One-time task |
+Database and security hardening
 
-**Deliverables:**
+#### Tasks
+
+| Task                                                                                                          | Role | Estimate | Calculation        |
+| ------------------------------------------------------------------------------------------------------------- | ---- | -------- | ------------------ |
+| **Alaa**                                                                                                      |      |          |                    |
+| PostgreSQL & PostGIS setup + DB config role + Security hardening & CIS benchmarks + Backup automation scripts |      | 30h      | 10h + 4h + 8h + 8h |
+| **Meslmany**                                                                                                  |      |          |                    |
+| DB validation and backup testing                                                                              |      | 4h       | One-time task      |
+
+#### Deliverables
+
 - ✅ `roles/postgres_postgis/` (156 lines)
 - ✅ `roles/db_config/` (89 lines - schemas, users, initial SQL)
 - ✅ `roles/security_hardening/` (203 lines)
@@ -412,20 +492,24 @@ Each batch follows the same pattern:
 ---
 
 #### Week 4: Keycloak & Docker Swarm
-**Focus:** Identity management and container orchestration
 
-**Tasks:**
+#### Focus
 
-| Task | Role | Estimate | Calculation |
-|------|------|----------|-------------|
-| **Alaa** | | | |
-| Docker & Swarm configuration + Keycloak installation & setup | | 22h | 12h + 10h |
-| **Marawan** | | | |
-| Container health check scripts | | 3h | One-time task |
-| **Meslmany** | | | |
-| Keycloak and Docker validation | | 4h | One-time task |
+Identity management and container orchestration
 
-**Deliverables:**
+#### Tasks
+
+| Task                                                         | Role | Estimate | Calculation   |
+| ------------------------------------------------------------ | ---- | -------- | ------------- |
+| **Alaa**                                                     |      |          |               |
+| Docker & Swarm configuration + Keycloak installation & setup |      | 22h      | 12h + 10h     |
+| **Marawan**                                                  |      |          |               |
+| Container health check scripts                               |      | 3h       | One-time task |
+| **Meslmany**                                                 |      |          |               |
+| Keycloak and Docker validation                               |      | 4h       | One-time task |
+
+#### Deliverables
+
 - ✅ `roles/keycloak_install/` (134 lines)
 - ✅ `roles/docker_swarm/` (98 lines)
 - ✅ Docker Compose file for Keycloak
@@ -434,20 +518,24 @@ Each batch follows the same pattern:
 ---
 
 #### Week 5: Application Services & Reverse Proxy
-**Focus:** App containers and SSL/TLS
 
-**Tasks:**
+#### Focus
 
-| Task | Role | Estimate | Calculation |
-|------|------|----------|-------------|
-| **Alaa** | | | |
-| Application containers + Nginx & SSL/TLS configuration | | 18h | 8h + 10h |
-| **Marawan** | | | |
-| Config validation scripts | | 5h | One-time task |
-| **Meslmany** | | | |
-| SSL validation and config testing | | 5h | One-time task |
+App containers and SSL/TLS
 
-**Deliverables:**
+#### Tasks
+
+| Task                                                   | Role | Estimate | Calculation   |
+| ------------------------------------------------------ | ---- | -------- | ------------- |
+| **Alaa**                                               |      |          |               |
+| Application containers + Nginx & SSL/TLS configuration |      | 18h      | 8h + 10h      |
+| **Marawan**                                            |      |          |               |
+| Config validation scripts                              |      | 5h       | One-time task |
+| **Meslmany**                                           |      |          |               |
+| SSL validation and config testing                      |      | 5h       | One-time task |
+
+#### Deliverables
+
 - ✅ `roles/docker_containers/` (187 lines)
 - ✅ `roles/db_config/` (112 lines)
 - ✅ `roles/reverse_proxy/` (156 lines)
@@ -458,20 +546,24 @@ Each batch follows the same pattern:
 ---
 
 #### Week 6: GeoServer Layers
-**Focus:** Spatial data management
 
-**Tasks:**
+#### Focus
 
-| Task | Role | Estimate | Calculation |
-|------|------|----------|-------------|
-| **Alaa** | | | |
-| GeoServer layers & REST API | | 13h | One-time task |
-| **Marawan** | | | |
-| Layer validation scripts | | 4h | One-time task |
-| **Meslmany** | | | |
-| Sample data preparation and layer validation | | 5h | One-time task |
+Spatial data management
 
-**Deliverables:**
+#### Tasks
+
+| Task                                         | Role | Estimate | Calculation   |
+| -------------------------------------------- | ---- | -------- | ------------- |
+| **Alaa**                                     |      |          |               |
+| GeoServer layers & REST API                  |      | 13h      | One-time task |
+| **Marawan**                                  |      |          |               |
+| Layer validation scripts                     |      | 4h       | One-time task |
+| **Meslmany**                                 |      |          |               |
+| Sample data preparation and layer validation |      | 5h       | One-time task |
+
+#### Deliverables
+
 - ✅ `roles/geoserver_layers/` (143 lines)
 - ✅ Sample data (3 vector layers, 2 raster layers)
 - ✅ SLD styles
@@ -481,20 +573,24 @@ Each batch follows the same pattern:
 ---
 
 #### Week 7: Keycloak Configuration
-**Focus:** Identity and access management
 
-**Tasks:**
+#### Focus
 
-| Task | Role | Estimate | Calculation |
-|------|------|----------|-------------|
-| **Alaa** | | | |
-| Keycloak realm & SSO configuration | | 11h | One-time task |
-| **Marawan** | | | |
-| User provisioning automation | | 4h | One-time task |
-| **Meslmany** | | | |
-| User templates and login testing | | 4h | One-time task |
+Identity and access management
 
-**Deliverables:**
+#### Tasks
+
+| Task                               | Role | Estimate | Calculation   |
+| ---------------------------------- | ---- | -------- | ------------- |
+| **Alaa**                           |      |          |               |
+| Keycloak realm & SSO configuration |      | 11h      | One-time task |
+| **Marawan**                        |      |          |               |
+| User provisioning automation       |      | 4h       | One-time task |
+| **Meslmany**                       |      |          |               |
+| User templates and login testing   |      | 4h       | One-time task |
+
+#### Deliverables
+
 - ✅ `roles/keycloak_config/` (178 lines)
 - ✅ Realm export: `gis_platform_realm.json`
 - ✅ User templates
@@ -504,20 +600,24 @@ Each batch follows the same pattern:
 ---
 
 #### Week 8: Monitoring & Logging
-**Focus:** Observability and ADR review
 
-**Tasks:**
+#### Focus
 
-| Task | Role | Estimate | Calculation |
-|------|------|----------|-------------|
-| **Alaa** | | | |
-| Monitoring stack + ADR logger & CI integration | | 21h | 16h + 5h |
-| **Marawan** | | | |
-| ADR review and finalization | | 6h | One-time task |
-| **Meslmany** | | | |
-| Dashboard review and alert testing | | 4h | One-time task |
+Observability and ADR review
 
-**Deliverables:**
+#### Tasks
+
+| Task                                           | Role | Estimate | Calculation   |
+| ---------------------------------------------- | ---- | -------- | ------------- |
+| **Alaa**                                       |      |          |               |
+| Monitoring stack + ADR logger & CI integration |      | 21h      | 16h + 5h      |
+| **Marawan**                                    |      |          |               |
+| ADR review and finalization                    |      | 6h       | One-time task |
+| **Meslmany**                                   |      |          |               |
+| Dashboard review and alert testing             |      | 4h       | One-time task |
+
+#### Deliverables
+
 - ✅ `roles/monitoring/` (234 lines)
 - ✅ `roles/logging/` (156 lines)
 - ✅ `roles/adr_logger/` (89 lines)
@@ -529,20 +629,24 @@ Each batch follows the same pattern:
 ---
 
 #### Week 9: Testing & Validation
-**Focus:** Comprehensive testing and restore procedures
 
-**Tasks:**
+#### Focus
 
-| Task | Role | Estimate | Calculation |
-|------|------|----------|-------------|
-| **Alaa** | | | |
-| Restore procedures & validation + Molecule tests & CI integration | | 12h | 6h + 6h |
-| **Marawan** | | | |
-| Test automation scripts | | 5h | One-time task |
-| **Meslmany** | | | |
-| Test case definition and DR testing | | 5h | One-time task |
+Comprehensive testing and restore procedures
 
-**Deliverables:**
+#### Tasks
+
+| Task                                                              | Role | Estimate | Calculation   |
+| ----------------------------------------------------------------- | ---- | -------- | ------------- |
+| **Alaa**                                                          |      |          |               |
+| Restore procedures & validation + Molecule tests & CI integration |      | 12h      | 6h + 6h       |
+| **Marawan**                                                       |      |          |               |
+| Test automation scripts                                           |      | 5h       | One-time task |
+| **Meslmany**                                                      |      |          |               |
+| Test case definition and DR testing                               |      | 5h       | One-time task |
+
+#### Deliverables
+
 - ✅ `playbooks/restore.yml` (restore procedures)
 - ✅ `playbooks/verify.yml` (156 lines)
 - ✅ 189 Molecule tests (84% coverage)
@@ -552,20 +656,24 @@ Each batch follows the same pattern:
 ---
 
 #### Week 10: Master Playbook & CI/CD
-**Focus:** Deployment automation and pipeline
 
-**Tasks:**
+#### Focus
 
-| Task | Role | Estimate | Calculation |
-|------|------|----------|-------------|
-| **Alaa** | | | |
-| Master playbooks + CI/CD pipeline & approval gates | | 19h | 12h + 7h |
-| **Marawan** | | | |
-| Deployment validation scripts | | 5h | One-time task |
-| **Meslmany** | | | |
-| Staging deployment testing | | 5h | One-time task |
+Deployment automation and pipeline
 
-**Deliverables:**
+#### Tasks
+
+| Task                                               | Role | Estimate | Calculation   |
+| -------------------------------------------------- | ---- | -------- | ------------- |
+| **Alaa**                                           |      |          |               |
+| Master playbooks + CI/CD pipeline & approval gates |      | 19h      | 12h + 7h      |
+| **Marawan**                                        |      |          |               |
+| Deployment validation scripts                      |      | 5h       | One-time task |
+| **Meslmany**                                       |      |          |               |
+| Staging deployment testing                         |      | 5h       | One-time task |
+
+#### Deliverables
+
 - ✅ `playbooks/deploy.yml` (234 lines)
 - ✅ `playbooks/rollback.yml` (156 lines)
 - ✅ Environment configs for dev/staging/prod
@@ -576,20 +684,24 @@ Each batch follows the same pattern:
 ---
 
 #### Week 11: DR Testing & Documentation
-**Focus:** Disaster recovery and comprehensive docs
 
-**Tasks:**
+#### Focus
 
-| Task | Role | Estimate | Calculation |
-|------|------|----------|-------------|
-| **Alaa** | | | |
-| n8n webhooks + JMeter & performance tests + Security audit | | 18h | 6h + 10h + 2h |
-| **Marawan** | | | |
-| Operator documentation | | 6h | One-time task |
-| **Meslmany** | | | |
-| User documentation | | 6h | One-time task |
+Disaster recovery and comprehensive docs
 
-**Deliverables:**
+#### Tasks
+
+| Task                                                       | Role | Estimate | Calculation   |
+| ---------------------------------------------------------- | ---- | -------- | ------------- |
+| **Alaa**                                                   |      |          |               |
+| n8n webhooks + JMeter & performance tests + Security audit |      | 18h      | 6h + 10h + 2h |
+| **Marawan**                                                |      |          |               |
+| Operator documentation                                     |      | 6h       | One-time task |
+| **Meslmany**                                               |      |          |               |
+| User documentation                                         |      | 6h       | One-time task |
+
+#### Deliverables
+
 - ✅ 5 n8n workflows
 - ✅ DR procedures (89 pages)
 - ✅ Performance report
@@ -602,21 +714,25 @@ Each batch follows the same pattern:
 ---
 
 #### Week 12: Final Integration & Handover
-**Focus:** Production readiness and SE handover
 
-**Tasks:**
+#### Focus
 
-| Task | Role | Estimate | Calculation |
-|------|------|----------|-------------|
-| **Alaa** | | | |
-| README, guides & diagrams | | 10h | One-time task |
-| E2E testing | | 6h | One-time task |
-| **Marawan** | | | |
-| Final polish & packaging | | 5h | One-time task |
-| **Meslmany** | | | |
-| SE acceptance testing | | 6h | One-time task |
+Production readiness and SE handover
 
-**Deliverables:**
+#### Tasks
+
+| Task                      | Role | Estimate | Calculation   |
+| ------------------------- | ---- | -------- | ------------- |
+| **Alaa**                  |      |          |               |
+| README, guides & diagrams |      | 10h      | One-time task |
+| E2E testing               |      | 6h       | One-time task |
+| **Marawan**               |      |          |               |
+| Final polish & packaging  |      | 5h       | One-time task |
+| **Meslmany**              |      |          |               |
+| SE acceptance testing     |      | 6h       | One-time task |
+
+#### Deliverables
+
 - ✅ Complete README with quick-start
 - ✅ Installation checklist
 - ✅ 8 architecture diagrams
@@ -630,7 +746,8 @@ Each batch follows the same pattern:
 
 ### IaC Post-Week 12: Support Mode
 
-**Weeks 13-15:**
+#### Weeks 13-15
+
 - Alaa: 8h/week support and maintenance
 - Deploy to 3+ client sites
 - Gather feedback and iterate
@@ -639,45 +756,45 @@ Each batch follows the same pattern:
 
 ---
 
-### Task Estimates
+### Workstream 2 Task Estimates
 
-| Role | Task | Estimate |
-|------|------|----------|
-| **Alaa** | Repository setup & Ansible structure | 23h |
-| | GeoServer role (Java, Tomcat, GeoServer) | 12h |
-| | Firewall role & configuration | 6h |
-| | PostgreSQL & PostGIS setup | 10h |
-| | DB config role (schemas, users, initial SQL) | 4h |
-| | Security hardening & CIS benchmarks | 8h |
-| | Backup automation scripts | 8h |
-| | Docker & Swarm configuration | 12h |
-| | Keycloak installation & setup | 10h |
-| | Application containers (backend/frontend) | 8h |
-| | Nginx & SSL/TLS configuration | 10h |
-| | GeoServer layers & REST API | 13h |
-| | Keycloak realm & SSO configuration | 11h |
-| | Monitoring stack (Prometheus, Grafana, Loki) | 16h |
-| | ADR logger & CI integration | 5h |
-| | Restore procedures & validation | 6h |
-| | Molecule tests & CI integration | 6h |
-| | Master playbooks (deploy/rollback) | 12h |
-| | CI/CD pipeline & approval gates | 7h |
-| | n8n webhooks & notifications | 6h |
-| | JMeter setup & performance tests | 10h |
-| | Security audit | 2h |
-| | README, guides & diagrams | 10h |
-| **Xamek** | ADR templates & documentation | 3h |
-| **Marawan** | Automation helper scripts | 4h |
-| | Automated testing scripts | 13h |
-| | Config validation scripts | 5h |
-| | Deployment validation scripts | 5h |
-| | Final polish & packaging | 5h |
-| **Meslmany** | Bootstrap validation | 3h |
-| | Infrastructure validation | 18h |
-| | DR testing procedures | 5h |
-| | Staging deployment testing | 5h |
-| **Marawan + Meslmany** | Operator & user documentation | 12h |
-| **Alaa + Meslmany** | E2E testing & SE acceptance | 12h |
+| Role                   | Task                                         | Estimate |
+| ---------------------- | -------------------------------------------- | -------- |
+| **Alaa**               | Repository setup & Ansible structure         | 23h      |
+|                        | GeoServer role (Java, Tomcat, GeoServer)     | 12h      |
+|                        | Firewall role & configuration                | 6h       |
+|                        | PostgreSQL & PostGIS setup                   | 10h      |
+|                        | DB config role (schemas, users, initial SQL) | 4h       |
+|                        | Security hardening & CIS benchmarks          | 8h       |
+|                        | Backup automation scripts                    | 8h       |
+|                        | Docker & Swarm configuration                 | 12h      |
+|                        | Keycloak installation & setup                | 10h      |
+|                        | Application containers (backend/frontend)    | 8h       |
+|                        | Nginx & SSL/TLS configuration                | 10h      |
+|                        | GeoServer layers & REST API                  | 13h      |
+|                        | Keycloak realm & SSO configuration           | 11h      |
+|                        | Monitoring stack (Prometheus, Grafana, Loki) | 16h      |
+|                        | ADR logger & CI integration                  | 5h       |
+|                        | Restore procedures & validation              | 6h       |
+|                        | Molecule tests & CI integration              | 6h       |
+|                        | Master playbooks (deploy/rollback)           | 12h      |
+|                        | CI/CD pipeline & approval gates              | 7h       |
+|                        | n8n webhooks & notifications                 | 6h       |
+|                        | JMeter setup & performance tests             | 10h      |
+|                        | Security audit                               | 2h       |
+|                        | README, guides & diagrams                    | 10h      |
+| **Xamek**              | ADR templates & documentation                | 3h       |
+| **Marawan**            | Automation helper scripts                    | 4h       |
+|                        | Automated testing scripts                    | 13h      |
+|                        | Config validation scripts                    | 5h       |
+|                        | Deployment validation scripts                | 5h       |
+|                        | Final polish & packaging                     | 5h       |
+| **Meslmany**           | Bootstrap validation                         | 3h       |
+|                        | Infrastructure validation                    | 18h      |
+|                        | DR testing procedures                        | 5h       |
+|                        | Staging deployment testing                   | 5h       |
+| **Marawan + Meslmany** | Operator & user documentation                | 12h      |
+| **Alaa + Meslmany**    | E2E testing & SE acceptance                  | 12h      |
 
 ### Implementation Specification
 
@@ -687,7 +804,8 @@ _See detailed technical specification below in the [IaC Deployment Implementatio
 
 ## Workstream 3: Automation & Tooling - Detailed Plan
 
-### Overview
+### Workstream 3 Overview
+
 **Duration:** 15 weeks (ongoing)  
 **Team:** Marawan (AI automation lead), Xamek (Week 1 architecture)  
 **Objective:** Automation framework supporting both workstreams
@@ -695,16 +813,20 @@ _See detailed technical specification below in the [IaC Deployment Implementatio
 ### Phase 1: Foundation (Weeks 1-2)
 
 #### Week 1: Architecture & Design
-**Focus:** Design automation framework
 
-**Tasks:**
+#### Focus
 
-| Task | Role | Estimate | Calculation |
-|------|------|----------|-------------|
-| **Xamek** | | | |
-| Design automation architecture + Define paved roads standards | | 12h | 8h + 4h |
+Design automation framework
 
-**Deliverables:**
+#### Tasks
+
+| Task                                                          | Role | Estimate | Calculation |
+| ------------------------------------------------------------- | ---- | -------- | ----------- |
+| **Xamek**                                                     |      |          |             |
+| Design automation architecture + Define paved roads standards |      | 12h      | 8h + 4h     |
+
+#### Deliverables
+
 - ✅ Automation architecture document
 - ✅ Paved roads standards defined
 - ✅ CI/CD integration plan
@@ -712,16 +834,20 @@ _See detailed technical specification below in the [IaC Deployment Implementatio
 ---
 
 #### Week 2: Implementation & Integration
-**Focus:** Build and deploy automation tools
 
-**Tasks:**
+#### Focus
 
-| Task | Role | Estimate | Calculation |
-|------|------|----------|-------------|
-| **Marawan** | | | |
-| Validation scripts (9 scripts) + n8n workflows + GitLab board automation + CI/CD integration | | 44h | 24h + 8h + 4h + 8h |
+Build and deploy automation tools
 
-**Deliverables:**
+#### Tasks
+
+| Task                                                                                         | Role | Estimate | Calculation        |
+| -------------------------------------------------------------------------------------------- | ---- | -------- | ------------------ |
+| **Marawan**                                                                                  |      |          |                    |
+| Validation scripts (9 scripts) + n8n workflows + GitLab board automation + CI/CD integration |      | 44h      | 24h + 8h + 4h + 8h |
+
+#### Deliverables
+
 - ✅ **Validation Scripts (9 total):**
   - `scripts/validate-user-story.sh`
   - `scripts/validate-figma-design.sh`
@@ -746,14 +872,15 @@ _See detailed technical specification below in the [IaC Deployment Implementatio
 
 #### Ongoing Activities
 
-**Tasks:**
+#### Tasks
 
-| Task | Role | Estimate | Calculation |
-|------|------|----------|-------------|
-| **Marawan** | | | |
-| Automation support | | 6h/week | Weekly recurring |
+| Task               | Role | Estimate | Calculation      |
+| ------------------ | ---- | -------- | ---------------- |
+| **Marawan**        |      |          |                  |
+| Automation support |      | 6h/week  | Weekly recurring |
 
-**Activities:**
+#### Activities
+
 - Monitor CI/CD pipeline health
 - Update automation scripts based on feedback
 - Add new compliance rules as needed
@@ -762,7 +889,8 @@ _See detailed technical specification below in the [IaC Deployment Implementatio
 - Optimize script performance
 - Generate compliance reports
 
-**Deliverables:**
+#### Deliverables
+
 - ✅ Weekly automation health reports
 - ✅ Script updates and improvements
 - ✅ Compliance reports for each plugin batch
@@ -770,17 +898,17 @@ _See detailed technical specification below in the [IaC Deployment Implementatio
 
 ---
 
-### Task Estimates
+### Workstream 3 Task Estimates
 
-| Role | Task | Estimate |
-|------|------|----------|
-| **Xamek** | Design automation architecture | 8h |
-| | Define paved roads standards | 4h |
-| **Marawan** | Validation scripts (9 scripts total) | 24h |
-| | n8n workflows (PR cycle, KB integration) | 8h |
-| | GitLab board automation | 4h |
-| | CI/CD pipeline integration | 8h |
-| | Automation support (weekly, ongoing) | 6h/week |
+| Role        | Task                                     | Estimate |
+| ----------- | ---------------------------------------- | -------- |
+| **Xamek**   | Architecture & design                    | 8h       |
+|             | Define paved roads standards             | 4h       |
+| **Marawan** | Validation scripts (9 scripts total)     | 24h      |
+|             | n8n workflows (PR cycle, KB integration) | 8h       |
+|             | GitLab board automation                  | 4h       |
+|             | CI/CD pipeline integration               | 8h       |
+|             | Automation support (weekly, ongoing)     | 6h/week  |
 
 ### Pipeline Specification
 
@@ -799,26 +927,29 @@ This appendix contains the complete technical specifications for Workstream 2 an
 This section provides the complete technical specification for the Infrastructure-as-Code deployment system that Alaa will build in Workstream 2.
 
 ### Strategic Goal
+
 - Enable Solutions Engineers to deploy the entire system on client machines with a single, auditable script
 - Embed traceability and governance at every step: provisioning, configuration, identity, orchestration
 - Automate compliance checks, decision logging (ADRs), and institutional memory updates
 
 ### Modular Ansible Roles
 
-| Role | Purpose | Governance Hooks |
-|------|---------|------------------|
-| geoserver | Install GeoServer and extensions | Logs version, port, extension list |
-| postgres_postgis | Provision PostgreSQL with PostGIS | Logs database name, version, schema details |
-| docker_swarm | Initialize Docker Swarm (single-node or cluster) | Logs swarm ID, join token |
-| docker_containers | Pull images and run containers | Logs container name, image, ports, env vars |
-| db_config | Create schemas, users, load initial SQL configuration | Logs config keys, schema ownership |
-| geoserver_layers | Upload shapefiles & GeoTIFFs via GeoServer REST API | Logs workspace, store, and layer names |
-| keycloak_config | Create realm, users, roles in Keycloak | Logs realm name, usernames, assigned roles |
-| adr_logger | Generate Architectural Decision Records (ADRs) | Logs ADR ID, title, status, and decision metadata |
-| backend / frontend | Deploy application services | Logs service URLs, health check results |
-| security | Configure firewall, SSL, and network policies | Logs rule details, certificate fingerprints |
+| Role               | Purpose                                               | Governance Hooks                                  |
+| ------------------ | ----------------------------------------------------- | ------------------------------------------------- |
+| geoserver          | Install GeoServer and extensions                      | Logs version, port, extension list                |
+| postgres_postgis   | Provision PostgreSQL with PostGIS                     | Logs database name, version, schema details       |
+| docker_swarm       | Initialize Docker Swarm (single-node or cluster)      | Logs swarm ID, join token                         |
+| docker_containers  | Pull images and run containers                        | Logs container name, image, ports, env vars       |
+| db_config          | Create schemas, users, load initial SQL configuration | Logs config keys, schema ownership                |
+| geoserver_layers   | Upload shapefiles & GeoTIFFs via GeoServer REST API   | Logs workspace, store, and layer names            |
+| keycloak_config    | Create realm, users, roles in Keycloak                | Logs realm name, usernames, assigned roles        |
+| adr_logger         | Generate Architectural Decision Records (ADRs)        | Logs ADR ID, title, status, and decision metadata |
+| backend / frontend | Deploy application services                           | Logs service URLs, health check results           |
+| security           | Configure firewall, SSL, and network policies         | Logs rule details, certificate fingerprints       |
+
 ### Repository Structure
-```
+
+```text
 deploy/
 ├── deploy.yml
 ├── inventory/
@@ -845,6 +976,7 @@ deploy/
 ```
 
 **bootstrap.sh** installs Ansible, clones the repo, bootstraps inventory, and runs:
+
 ```bash
 ansible-playbook deploy.yml -i inventory/<client_env>
 ```
@@ -853,27 +985,29 @@ ansible-playbook deploy.yml -i inventory/<client_env>
 
 ### GitLab CI/CD Integration
 
-**Pipeline Stages:**
+#### Pipeline Stages
+
 - validate
 - deploy
 - test
 - governance
 - notify
 
-**Core CI Jobs:**
+#### Core CI Jobs
 
-| Job | Stage | Command | Artifacts |
-|-----|-------|---------|-----------|
-| `syntax_check` | validate | `ansible-playbook --syntax-check deploy.yml` | - |
-| `lint` | validate | `ansible-lint roles/` | - |
-| `deploy_staging` | deploy | `ansible-playbook deploy.yml -i inventory/staging` | deployment logs |
-| `verify` | test | `ansible-playbook tests/verify.yml` | test results |
-| `check_adrs` | governance | Check for ADRs in `infra/adr/` | ADR report |
-| `log_trace` | governance | Upload `/var/log/deploy_trace.log` | trace log |
-| `tag_release` | governance | Create Git tag: `deploy-<client>-<env>-v<version>` | - |
-| `notify_n8n` | notify | Trigger n8n webhook with deployment summary | - |
+| Job              | Stage      | Command                                            | Artifacts       |
+| ---------------- | ---------- | -------------------------------------------------- | --------------- |
+| `syntax_check`   | validate   | `ansible-playbook --syntax-check deploy.yml`       | -               |
+| `lint`           | validate   | `ansible-lint roles/`                              | -               |
+| `deploy_staging` | deploy     | `ansible-playbook deploy.yml -i inventory/staging` | deployment logs |
+| `verify`         | test       | `ansible-playbook tests/verify.yml`                | test results    |
+| `check_adrs`     | governance | Check for ADRs in `infra/adr/`                     | ADR report      |
+| `log_trace`      | governance | Upload `/var/log/deploy_trace.log`                 | trace log       |
+| `tag_release`    | governance | Create Git tag: `deploy-<client>-<env>-v<version>` | -               |
+| `notify_n8n`     | notify     | Trigger n8n webhook with deployment summary        | -               |
 
-**Governance Policies:**
+#### Governance Policies
+
 - Protect the `main` and `release/*` branches
 - Require Architecture Review Board approval for merges
 - Enforce presence of ADRs for new roles/modules
@@ -881,43 +1015,55 @@ ansible-playbook deploy.yml -i inventory/<client_env>
 
 ### n8n Automation Hooks
 
-| Trigger | Workflow | Action |
-|---------|----------|--------|
-| Deployment success | `deployment_notify` | Send Slack notification, update RAGFlow KB |
-| Deployment failure | `deployment_alert` | Alert team, create GitLab issue |
-| ADR created | `adr_review` | Notify reviewers, schedule review meeting |
-| Backup completed | `backup_notify` | Log to governance DB, verify backup integrity |
-| Security alert | `security_incident` | Escalate to security team, log to SIEM |
+| Trigger            | Workflow            | Action                                        |
+| ------------------ | ------------------- | --------------------------------------------- |
+| Deployment success | `deployment_notify` | Send Slack notification, update RAGFlow KB    |
+| Deployment failure | `deployment_alert`  | Alert team, create GitLab issue               |
+| ADR created        | `adr_review`        | Notify reviewers, schedule review meeting     |
+| Backup completed   | `backup_notify`     | Log to governance DB, verify backup integrity |
+| Security alert     | `security_incident` | Escalate to security team, log to SIEM        |
 
 ### ADR Framework
 
-**Storage**: Store ADRs in `infra/adr/` as `ADR-<###>-<short-title>.md`
+#### Storage
 
-**Template:**
+Store ADRs in `infra/adr/` as `ADR-<###>-<short-title>.md`
+
+#### Template
+
 ```markdown
 # ADR-003: Use Docker Swarm for Orchestration
 
 ## Status
+
 Accepted
 
 ## Context
+
 Client-deployed environments need lightweight orchestration.
 
 ## Decision
+
 Adopt Docker Swarm for container management.
 
 ## Consequences
+
 - Simplifies networking and scaling
 - Requires token management and health-check flows
 ```
 
-**Enforcement**: CI job `check_adrs` enforces an ADR for every new role or major change
+#### Enforcement
+
+CI job `check_adrs` enforces an ADR for every new role or major change
 
 ### Deployment Verification
 
-**Central verify playbook**: `tests/verify.yml` imports test tasks from each role
+#### Central verify playbook
 
-**Role-level assertions:**
+`tests/verify.yml` imports test tasks from each role
+
+#### Role-level assertions
+
 - **GeoServer**: `uri` module checks HTTP 200 on `/geoserver/web`
 - **PostGIS**: `postgresql_query` verifies required tables/schema
 - **Keycloak**: REST API calls confirm realm and user existence
@@ -926,7 +1072,8 @@ Adopt Docker Swarm for container management.
 
 ### SE Deployment Workflow
 
-**Step 1: Pre-flight**
+#### Step 1: Pre-flight
+
 ```bash
 # Check system requirements
 ./scripts/preflight_check.sh
@@ -935,13 +1082,15 @@ Adopt Docker Swarm for container management.
 cat group_vars/<client_id>.yml
 ```
 
-**Step 2: Bootstrap**
+#### Step 2: Bootstrap
+
 ```bash
 # Run bootstrap script
 ./bootstrap.sh <client_id> <environment>
 ```
 
-**Step 3: Deploy**
+#### Step 3: Deploy
+
 ```bash
 # Deploy full stack
 ansible-playbook deploy.yml -i inventory/<client_id>_<env>.yml
@@ -950,13 +1099,15 @@ ansible-playbook deploy.yml -i inventory/<client_id>_<env>.yml
 ansible-playbook deploy.yml -i inventory/<client_id>_<env>.yml --tags geoserver,postgres
 ```
 
-**Step 4: Verify**
+#### Step 4: Verify
+
 ```bash
 # Run verification tests
 ansible-playbook tests/verify.yml -i inventory/<client_id>_<env>.yml
 ```
 
-**Step 5: Handover**
+#### Step 5: Handover
+
 - Review deployment summary report
 - Verify all services are healthy
 - Update client documentation
@@ -964,7 +1115,8 @@ ansible-playbook tests/verify.yml -i inventory/<client_id>_<env>.yml
 
 ### Rollback Procedures
 
-**Tag-based rollback:**
+#### Tag-based rollback
+
 ```bash
 # List available versions
 git tag -l "deploy-<client>-<env>-*"
@@ -974,7 +1126,8 @@ git checkout deploy-<client>-<env>-v1.2.3
 ansible-playbook deploy.yml -i inventory/<client_id>_<env>.yml
 ```
 
-**Backup-based rollback:**
+#### Backup-based rollback
+
 ```bash
 # List available backups
 ./scripts/list_backups.sh <client_id>
@@ -986,14 +1139,16 @@ ansible-playbook playbooks/restore.yml -i inventory/<client_id>_<env>.yml \
 
 ### Monitoring & Alerting
 
-**Metrics collected:**
+#### Metrics collected
+
 - System metrics (CPU, memory, disk, network)
 - Application metrics (response time, error rate, throughput)
 - Database metrics (connections, query time, replication lag)
 - GeoServer metrics (WMS/WFS requests, layer count)
 - Keycloak metrics (login attempts, active sessions)
 
-**Alert thresholds:**
+#### Alert thresholds
+
 - High CPU: >80% for 5 minutes
 - High memory: >90% for 5 minutes
 - Disk space low: <10% free
@@ -1003,7 +1158,8 @@ ansible-playbook playbooks/restore.yml -i inventory/<client_id>_<env>.yml \
 
 ### Security Hardening
 
-**Applied by `security` role:**
+#### Applied by `security` role
+
 - CIS benchmark compliance
 - Firewall configuration (UFW/firewalld)
 - SSH hardening (key-based auth, disable root login)
@@ -1015,7 +1171,8 @@ ansible-playbook playbooks/restore.yml -i inventory/<client_id>_<env>.yml \
 
 ### Backup Strategy
 
-**Backup schedule:**
+#### Backup schedule
+
 - PostgreSQL: Daily full + hourly incremental
 - GeoServer data: Weekly full
 - Keycloak realm: Daily
@@ -1023,19 +1180,22 @@ ansible-playbook playbooks/restore.yml -i inventory/<client_id>_<env>.yml \
 - Docker volumes: Weekly
 - System configs: Daily
 
-**Retention policy:**
+#### Retention policy
+
 - Local: 30 days
 - Remote (S3/Azure): 90 days
 - Compliance archives: 7 years (if required)
 
-**Backup verification:**
+#### Backup verification
+
 - Automated restore test: Weekly
 - Checksum verification: Daily
 - Backup size monitoring: Daily
 
 ### Performance Testing with JMeter
 
-**Test Plans:**
+#### Test Plans
+
 ```
 tests/performance/
 ├── api_load_test.jmx
@@ -1046,18 +1206,19 @@ tests/performance/
 └── full_stack_test.jmx
 ```
 
-**Test Scenarios:**
+#### Test Scenarios
 
-| Test Plan | Target | Scenario | Users | Duration |
-|-----------|--------|----------|-------|----------|
-| `api_load_test.jmx` | Backend API | CRUD operations on layers | 100-1000 | 30 min |
-| `geoserver_wms_test.jmx` | GeoServer WMS | GetMap requests (various sizes) | 50-500 | 20 min |
-| `geoserver_wfs_test.jmx` | GeoServer WFS | GetFeature requests | 50-300 | 20 min |
-| `keycloak_auth_test.jmx` | Keycloak | Login/logout flows | 100-500 | 15 min |
-| `frontend_load_test.jmx` | Frontend | Page loads, interactions | 200-1000 | 30 min |
-| `full_stack_test.jmx` | All services | End-to-end user journeys | 100-500 | 60 min |
+| Test Plan                | Target        | Scenario                        | Users    | Duration |
+| ------------------------ | ------------- | ------------------------------- | -------- | -------- |
+| `api_load_test.jmx`      | Backend API   | CRUD operations on layers       | 100-1000 | 30 min   |
+| `geoserver_wms_test.jmx` | GeoServer WMS | GetMap requests (various sizes) | 50-500   | 20 min   |
+| `geoserver_wfs_test.jmx` | GeoServer WFS | GetFeature requests             | 50-300   | 20 min   |
+| `keycloak_auth_test.jmx` | Keycloak      | Login/logout flows              | 100-500  | 15 min   |
+| `frontend_load_test.jmx` | Frontend      | Page loads, interactions        | 200-1000 | 30 min   |
+| `full_stack_test.jmx`    | All services  | End-to-end user journeys        | 100-500  | 60 min   |
 
-**Acceptance Criteria:**
+#### Acceptance Criteria
+
 - Average response time: <500ms for API, <200ms for WMS/WFS
 - 95th percentile: <1000ms for API, <500ms for WMS/WFS
 - Error rate: <1%
@@ -1067,7 +1228,8 @@ tests/performance/
 
 ### Documentation Deliverables
 
-**For Solutions Engineers:**
+#### For Solutions Engineers
+
 - Quick-start guide
 - Deployment checklist
 - Troubleshooting FAQ
@@ -1075,7 +1237,8 @@ tests/performance/
 - Video walkthrough
 - Performance testing guide
 
-**For Operations:**
+#### For Operations
+
 - Operator runbook
 - Maintenance procedures
 - Backup/restore procedures
@@ -1083,7 +1246,8 @@ tests/performance/
 - Monitoring guide
 - Performance baseline reports
 
-**For Developers:**
+#### For Developers
+
 - Architecture overview
 - API documentation
 - Database schema
@@ -1099,36 +1263,36 @@ This section describes the complete automated workflow that Marawan will impleme
 
 ### GitLab Board Columns
 
-| Column Name | Label Used | Purpose |
-|-------------|------------|---------|
-| Backlog | `backlog` | Placeholder for untriaged issues |
-| User Story Review | `user-story-review` | PR open for `/docs/user-stories/*.md` |
-| Fixing US Review Comments | `fix-us-comments` | PO or reviewers requested changes to user story |
-| Design Review | `design-review` | PR open for `/designs/README.md` |
+| Column Name                   | Label Used            | Purpose                                              |
+| ----------------------------- | --------------------- | ---------------------------------------------------- |
+| Backlog                       | `backlog`             | Placeholder for untriaged issues                     |
+| User Story Review             | `user-story-review`   | PR open for `/docs/user-stories/*.md`                |
+| Fixing US Review Comments     | `fix-us-comments`     | PO or reviewers requested changes to user story      |
+| Design Review                 | `design-review`       | PR open for `/designs/README.md`                     |
 | Fixing Design Review Comments | `fix-design-comments` | UX or reviewers requested changes to Figma or README |
-| Dev Review | `dev-review` | PR open for `/src/plugins/` |
-| Fixing Code Review Comments | `fix-code-comments` | Dev or CTO requested changes during code review |
-| Ready for QA | `ready-for-qa` | Dev complete â€” QA issue opened |
-| QA In Progress | `qa-in-progress` | QA actively testing |
-| Bug Fixing | `bug-fixing` | Bugs confirmed and assigned to Developer |
-| QA Retest | `qa-retest` | QA verifying fixed bugs |
-| QA Passed | `qa-passed` | All bugs resolved â€” QA passed |
-| Ready for Release | `ready-for-release` | Approved for deployment |
-| Done | `done` | Released to production |
+| Dev Review                    | `dev-review`          | PR open for `/src/plugins/`                          |
+| Fixing Code Review Comments   | `fix-code-comments`   | Dev or CTO requested changes during code review      |
+| Ready for QA                  | `ready-for-qa`        | Dev complete â€” QA issue opened                     |
+| QA In Progress                | `qa-in-progress`      | QA actively testing                                  |
+| Bug Fixing                    | `bug-fixing`          | Bugs confirmed and assigned to Developer             |
+| QA Retest                     | `qa-retest`           | QA verifying fixed bugs                              |
+| QA Passed                     | `qa-passed`           | All bugs resolved â€” QA passed                      |
+| Ready for Release             | `ready-for-release`   | Approved for deployment                              |
+| Done                          | `done`                | Released to production                               |
 
 ### Roles & Responsibilities
 
-| Role | Person | Responsibilities |
-|------|--------|------------------|
-| Product Owner | Hajar | User story creation, acceptance criteria |
-| Solution Engineer | Meslmany | First review, feasibility assessment |
-| Chief Architect | Xamek | Technical standards, architecture review |
-| Senior Developer | Mounir | Code review, design review, spec validation |
-| AI Developer | Marawan | Automation scripts, CI/CD integration |
-| CTO | Amr | Final approval, technical sign-off |
-| UX Designer | Menna | Figma designs, design system |
-| Developers | Omar, Basem, Khadra, Hassan, Samy | Implementation, bug fixes |
-| QA Engineer | TBD | Test planning, execution, bug reporting |
+| Role              | Person                            | Responsibilities                            |
+| ----------------- | --------------------------------- | ------------------------------------------- |
+| Product Owner     | Hajar                             | User story creation, acceptance criteria    |
+| Solution Engineer | Meslmany                          | First review, feasibility assessment        |
+| Chief Architect   | Xamek                             | Technical standards, architecture review    |
+| Senior Developer  | Mounir                            | Code review, design review, spec validation |
+| AI Developer      | Marawan                           | Automation scripts, CI/CD integration       |
+| CTO               | Amr                               | Final approval, technical sign-off          |
+| UX Designer       | Menna                             | Figma designs, design system                |
+| Developers        | Omar, Basem, Khadra, Hassan, Samy | Implementation, bug fixes                   |
+| QA Engineer       | TBD                               | Test planning, execution, bug reporting     |
 
 ### Step 1: PO Creates User Story Document
 
@@ -1137,7 +1301,8 @@ This section describes the complete automated workflow that Marawan will impleme
 **Reviewers**: Solution Engineer, Senior Developer, Architect  
 **Board Column**: `User Story Review`
 
-**n8n Actions:**
+#### n8n Actions
+
 - On PR opened:
   - Trigger: `pr_review_cycle` workflow (reusable)
   - Move issue to `user-story-review`
@@ -1168,7 +1333,8 @@ This section describes the complete automated workflow that Marawan will impleme
 **Board Column**: `Design Review`  
 **Prerequisites**: GitLab tag `usdoc-finalized-plugin-xyz` exists
 
-**n8n Actions:**
+#### n8n Actions
+
 - On PR opened:
   - Trigger: `pr_review_cycle` workflow (reusable)
   - Move issue to `design-review`
@@ -1199,7 +1365,8 @@ This section describes the complete automated workflow that Marawan will impleme
 **Board Column**: `Dev Review`  
 **Prerequisites**: GitLab tags `usdoc-finalized-plugin-xyz` and `figma-finalized-plugin-xyz` exist
 
-**n8n Actions:**
+#### n8n Actions
+
 - On PR opened:
   - Trigger: `pr_review_cycle` workflow (reusable)
   - Move issue to `dev-review`
@@ -1238,7 +1405,8 @@ This section describes the complete automated workflow that Marawan will impleme
 **Board Column**: `QA In Progress` → `Bug Fixing` → `QA Retest` → `QA Passed`  
 **Prerequisites**: GitLab tag `dev-complete-plugin-xyz` exists, QA environment provisioned
 
-**QA Workflow:**
+#### QA Workflow
+
 - QA Engineer begins testing only after:
   - Issue `test-plugin-xyz` is assigned to them
   - GitLab tags exist: `usdoc-finalized-plugin-xyz`, `figma-finalized-plugin-xyz`, `dev-complete-plugin-xyz`
@@ -1255,7 +1423,8 @@ This section describes the complete automated workflow that Marawan will impleme
   - Parent issue: `test-plugin-xyz`
   - References: User story section, Figma component, code file
 
-**n8n Actions:**
+#### n8n Actions
+
 - On `test-plugin-xyz` opened:
   - Schedule QA kickoff meeting (attendees: QA Engineer, Developer, Mounir)
   - Move parent issue to: `qa-in-progress`
@@ -1299,12 +1468,14 @@ This section describes the complete automated workflow that Marawan will impleme
 **Board Column**: `Ready for Release` → `Done`  
 **Prerequisites**: GitLab tag `qa-passed-plugin-xyz` exists
 
-**Release Workflow:**
+#### Release Workflow
+
 - CTO (Amr) reviews QA results and approves release
 - Release manager creates release branch
 - Deployment to staging → production
 
-**n8n Actions:**
+#### n8n Actions
+
 - On issue moved to `qa-passed`:
   - Create release approval request
   - Assign: CTO (Amr)
@@ -1325,8 +1496,10 @@ This section describes the complete automated workflow that Marawan will impleme
 ### Reusable Workflows
 
 #### `pr_review_cycle` (n8n sub-workflow)
+
 **Trigger**: PR opened for any step  
 **Actions**:
+
 1. Parse PR metadata (plugin name, step, reviewers)
 2. Schedule review meeting:
    - Step 1: Joint review (PO, SE, Architect, Sr Dev)
@@ -1340,8 +1513,10 @@ This section describes the complete automated workflow that Marawan will impleme
    - Post summary as PR comment
 
 #### `update_kb` (n8n sub-workflow)
+
 **Trigger**: Any significant state change  
 **Actions**:
+
 1. Extract relevant content based on event type
 2. Format for RAGFlow ingestion
 3. Update RAGFlow KB with categorized content:
@@ -1354,17 +1529,17 @@ This section describes the complete automated workflow that Marawan will impleme
 
 ### Validation Scripts (by Marawan)
 
-| Script | Purpose | Exit Code on Failure |
-|--------|---------|---------------------|
-| `scripts/validate-user-story.sh` | Check US doc has required sections | 1 |
-| `scripts/validate-figma-design.sh` | Verify Figma links, Chakra mapping | 2 |
-| `scripts/check-test-coverage.sh` | Ensure unit test coverage â‰¥ 80% | 3 |
-| `scripts/validate-us-coverage.sh` | Match implementation to user story | 4 |
-| `scripts/validate-figma-coverage.sh` | Match UI components to Figma | 5 |
-| `scripts/check-paved-roads.sh` | Verify coding standards compliance | 6 |
-| `scripts/provision-qa-env.sh` | Create isolated QA environment | 7 |
-| `scripts/cleanup-qa-env.sh` | Remove QA environment after release | 8 |
-| `scripts/create-release.sh` | Generate release branch and notes | 9 |
+| Script                               | Purpose                             | Exit Code on Failure |
+| ------------------------------------ | ----------------------------------- | -------------------- |
+| `scripts/validate-user-story.sh`     | Check US doc has required sections  | 1                    |
+| `scripts/validate-figma-design.sh`   | Verify Figma links, Chakra mapping  | 2                    |
+| `scripts/check-test-coverage.sh`     | Ensure unit test coverage â‰¥ 80%   | 3                    |
+| `scripts/validate-us-coverage.sh`    | Match implementation to user story  | 4                    |
+| `scripts/validate-figma-coverage.sh` | Match UI components to Figma        | 5                    |
+| `scripts/check-paved-roads.sh`       | Verify coding standards compliance  | 6                    |
+| `scripts/provision-qa-env.sh`        | Create isolated QA environment      | 7                    |
+| `scripts/cleanup-qa-env.sh`          | Remove QA environment after release | 8                    |
+| `scripts/create-release.sh`          | Generate release branch and notes   | 9                    |
 
 **Integration**: All scripts integrated into GitLab CI pipeline (`.gitlab-ci.yml`)  
 **Reporting**: Validation failures logged to `/logs/validation-failures/`
