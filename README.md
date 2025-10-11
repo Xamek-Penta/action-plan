@@ -34,13 +34,16 @@
   - [Week-by-Week Breakdown](#week-by-week-breakdown)
   - [IaC Post-Week 12: Support Mode](#iac-post-week-12-support-mode)
   - [Task Estimates](#task-estimates-1)
+  - [Implementation Specification](#implementation-specification)
 - [Workstream 3: Automation & Tooling - Detailed Plan](#workstream-3-automation--tooling---detailed-plan)
   - [Overview](#overview-2)
   - [Phase 1: Foundation](#phase-1-foundation-weeks-1-2)
   - [Phase 2: Continuous Support](#phase-2-continuous-support-weeks-3-15)
   - [Task Estimates](#task-estimates-2)
-- [IaC Deployment Implementation Specification](#iac-deployment-implementation-specification)
-- [GitLab Automated Delivery Pipeline Specification](#gitlab-automated-delivery-pipeline-specification)
+  - [Pipeline Specification](#pipeline-specification)
+- [Appendix: Detailed Specifications](#appendix-detailed-specifications)
+  - [IaC Deployment Implementation Specification](#iac-deployment-implementation-specification)
+  - [GitLab Automated Delivery Pipeline Specification](#gitlab-automated-delivery-pipeline-specification)
 
 ---
 
@@ -202,18 +205,24 @@ Develop automation scripts, CI/CD pipelines, and governance frameworks to suppor
 
 | Task | Role | Estimate | Calculation |
 |------|------|----------|-------------|
-| User Story Creation | Hajar | 60h | 15 plugins × 4h |
-| User Story Review | Meslmany | 15h | 15 plugins × 1h |
-| User Story Review | Xamek | 15h | 15 plugins × 1h |
-| User Story Review | Mounir | 15h | 15 plugins × 1h |
-| Plugin Review Checklist | Mounir | 2h | One-time task |
-| Example Plugin | Mounir | 14h | One-time task |
-| Figma Design Review | Mounir | 5h | 5 plugins × 1h |
-| Figma Baseline | Menna | 8h | One-time task |
-| Design System Docs | Menna | 6h | One-time task |
-| Figma Designs | Menna | 40h | 5 plugins × 8h |
-| Chakra Theme Setup | All Developers | 8h | One-time task |
-| Linting & CI Setup | All Developers | 8h | One-time task |
+| **Hajar** | | | |
+| User Story Creation | | 60h | 15 plugins × 4h |
+| **Meslmany** | | | |
+| User Story Review | | 15h | 15 plugins × 1h |
+| **Xamek** | | | |
+| User Story Review | | 15h | 15 plugins × 1h |
+| **Mounir** | | | |
+| User Story Review | | 15h | 15 plugins × 1h |
+| Plugin Review Checklist | | 2h | One-time task |
+| Example Plugin | | 14h | One-time task |
+| Figma Design Review | | 5h | 5 plugins × 1h |
+| **Menna** | | | |
+| Figma Baseline | | 8h | One-time task |
+| Design System Docs | | 6h | One-time task |
+| Figma Designs | | 40h | 5 plugins × 8h |
+| **All Developers** | | | |
+| Chakra Theme Setup | | 8h | One-time task |
+| Linting & CI Setup | | 8h | One-time task |
 
 **Deliverables:**
 - ✅ Example plugin with Chakra UI, Penta Grid, Penta Form Builder
@@ -236,15 +245,22 @@ Each batch follows the same pattern:
 
 | Task | Role | Estimate | Calculation |
 |------|------|----------|-------------|
-| User Story Creation (next batch) | Hajar | 20h | 5 plugins × 4h |
-| User Story Review (next batch) | Meslmany | 5h | 5 plugins × 1h |
-| User Story Review (next batch) | Xamek | 5h | 5 plugins × 1h |
-| User Story Review (next batch) | Mounir | 5h | 5 plugins × 1h |
-| Figma Designs (next batch) | Menna | 40h | 5 plugins × 8h |
-| Figma Design Review (next batch) | Mounir | 5h | 5 plugins × 1h |
-| Plugin Implementation (current batch) | 5 Developers | 210h | 5 plugins × 42h each |
-| Code Review (current batch) | Mounir | 5h | 5 plugins × 1h |
-| Code Review (current batch) | Amr | 5h | 5 plugins × 1h |
+| **Hajar** | | | |
+| User Story Creation (next batch) | | 20h | 5 plugins × 4h |
+| **Meslmany** | | | |
+| User Story Review (next batch) | | 5h | 5 plugins × 1h |
+| **Xamek** | | | |
+| User Story Review (next batch) | | 5h | 5 plugins × 1h |
+| **Mounir** | | | |
+| User Story Review (next batch) | | 5h | 5 plugins × 1h |
+| Figma Design Review (next batch) | | 5h | 5 plugins × 1h |
+| Code Review (current batch) | | 5h | 5 plugins × 1h |
+| **Menna** | | | |
+| Figma Designs (next batch) | | 40h | 5 plugins × 8h |
+| **5 Developers** | | | |
+| Plugin Implementation (current batch) | | 210h | 5 plugins × 42h each |
+| **Amr** | | | |
+| Code Review (current batch) | | 5h | 5 plugins × 1h |
 
 #### Week 2 (Testing & QA)
 **Focus:** Bug fixing and quality assurance
@@ -253,8 +269,10 @@ Each batch follows the same pattern:
 
 | Task | Role | Estimate | Calculation |
 |------|------|----------|-------------|
-| Plugin Testing | QA Engineer | 30h | 5 plugins × 6h |
-| Bug Fixing | 5 Developers | 130h | 5 plugins × 26h each |
+| **QA Engineer** | | | |
+| Plugin Testing | | 30h | 5 plugins × 6h |
+| **5 Developers** | | | |
+| Bug Fixing | | 130h | 5 plugins × 26h each |
 
 **Deliverables per Batch:**
 - ✅ 5 plugins refactored with Chakra UI (3 for Batch 6)
@@ -274,11 +292,14 @@ Each batch follows the same pattern:
 
 | Task | Role | Estimate | Calculation |
 |------|------|----------|-------------|
-| Compile handover materials | All Team | 50h | Combined effort |
-| Final documentation review | Mounir + Xamek | Included | Part of handover |
-| Knowledge transfer sessions | All Team | Included | Part of handover |
-| Products Team acceptance testing | Products Team | Included | Part of handover |
-| Sign-off and celebration | All | Included | Part of handover |
+| **All Team** | | | |
+| Compile handover materials | | 50h | Combined effort |
+| Knowledge transfer sessions | | Included | Part of handover |
+| Sign-off and celebration | | Included | Part of handover |
+| **Mounir + Xamek** | | | |
+| Final documentation review | | Included | Part of handover |
+| **Products Team** | | | |
+| Acceptance testing | | Included | Part of handover |
 
 **Deliverables:**
 - ✅ 30 plugins delivered
@@ -329,10 +350,14 @@ Each batch follows the same pattern:
 
 | Task | Role | Estimate | Calculation |
 |------|------|----------|-------------|
-| Repository scaffold & Ansible structure & bootstrap script | Alaa | 23h | Combined tasks |
-| ADR template and documentation | Xamek | 3h | One-time task |
-| Automation helper scripts | Marawan | 4h | One-time task |
-| Bootstrap validation | Meslmany | 3h | One-time task |
+| **Alaa** | | | |
+| Repository scaffold & Ansible structure & bootstrap script | | 23h | Combined tasks |
+| **Xamek** | | | |
+| ADR template and documentation | | 3h | One-time task |
+| **Marawan** | | | |
+| Automation helper scripts | | 4h | One-time task |
+| **Meslmany** | | | |
+| Bootstrap validation | | 3h | One-time task |
 
 **Deliverables:**
 - ✅ GitLab repository: `iac-deployment-automation`
@@ -350,9 +375,12 @@ Each batch follows the same pattern:
 
 | Task | Role | Estimate | Calculation |
 |------|------|----------|-------------|
-| GeoServer role + Firewall role & configuration | Alaa | 18h | 12h + 6h |
-| Automated testing scripts | Marawan | 3h | One-time task |
-| Deployment validation | Meslmany | 4h | One-time task |
+| **Alaa** | | | |
+| GeoServer role + Firewall role & configuration | | 18h | 12h + 6h |
+| **Marawan** | | | |
+| Automated testing scripts | | 13h | One-time task |
+| **Meslmany** | | | |
+| Deployment validation | | 4h | One-time task |
 
 **Deliverables:**
 - ✅ `roles/geoserver/` (127 lines of Ansible YAML)
@@ -369,12 +397,14 @@ Each batch follows the same pattern:
 
 | Task | Role | Estimate | Calculation |
 |------|------|----------|-------------|
-| PostgreSQL & PostGIS setup + Security hardening & CIS benchmarks | Alaa | 18h | 10h + 8h |
-| Backup automation scripts | Marawan | 3h | One-time task |
-| DB validation and backup testing | Meslmany | 4h | One-time task |
+| **Alaa** | | | |
+| PostgreSQL & PostGIS setup + DB config role + Security hardening & CIS benchmarks + Backup automation scripts | | 30h | 10h + 4h + 8h + 8h |
+| **Meslmany** | | | |
+| DB validation and backup testing | | 4h | One-time task |
 
 **Deliverables:**
 - ✅ `roles/postgres_postgis/` (156 lines)
+- ✅ `roles/db_config/` (89 lines - schemas, users, initial SQL)
 - ✅ `roles/security_hardening/` (203 lines)
 - ✅ Backup script: `pg_backup.sh`
 - ✅ ADR-002 written
@@ -388,9 +418,12 @@ Each batch follows the same pattern:
 
 | Task | Role | Estimate | Calculation |
 |------|------|----------|-------------|
-| Docker & Swarm configuration + Keycloak installation & setup | Alaa | 22h | 12h + 10h |
-| Container health check scripts | Marawan | 3h | One-time task |
-| Keycloak and Docker validation | Meslmany | 4h | One-time task |
+| **Alaa** | | | |
+| Docker & Swarm configuration + Keycloak installation & setup | | 22h | 12h + 10h |
+| **Marawan** | | | |
+| Container health check scripts | | 3h | One-time task |
+| **Meslmany** | | | |
+| Keycloak and Docker validation | | 4h | One-time task |
 
 **Deliverables:**
 - ✅ `roles/keycloak_install/` (134 lines)
@@ -407,9 +440,12 @@ Each batch follows the same pattern:
 
 | Task | Role | Estimate | Calculation |
 |------|------|----------|-------------|
-| Application containers + Nginx & SSL/TLS configuration | Alaa | 18h | 8h + 10h |
-| Config validation scripts | Marawan | 5h | One-time task |
-| SSL validation and config testing | Meslmany | 5h | One-time task |
+| **Alaa** | | | |
+| Application containers + Nginx & SSL/TLS configuration | | 18h | 8h + 10h |
+| **Marawan** | | | |
+| Config validation scripts | | 5h | One-time task |
+| **Meslmany** | | | |
+| SSL validation and config testing | | 5h | One-time task |
 
 **Deliverables:**
 - ✅ `roles/docker_containers/` (187 lines)
@@ -428,9 +464,12 @@ Each batch follows the same pattern:
 
 | Task | Role | Estimate | Calculation |
 |------|------|----------|-------------|
-| GeoServer layers & REST API | Alaa | 13h | One-time task |
-| Layer validation scripts | Marawan | 4h | One-time task |
-| Sample data preparation and layer validation | Meslmany | 5h | One-time task |
+| **Alaa** | | | |
+| GeoServer layers & REST API | | 13h | One-time task |
+| **Marawan** | | | |
+| Layer validation scripts | | 4h | One-time task |
+| **Meslmany** | | | |
+| Sample data preparation and layer validation | | 5h | One-time task |
 
 **Deliverables:**
 - ✅ `roles/geoserver_layers/` (143 lines)
@@ -448,9 +487,12 @@ Each batch follows the same pattern:
 
 | Task | Role | Estimate | Calculation |
 |------|------|----------|-------------|
-| Keycloak realm & SSO configuration | Alaa | 11h | One-time task |
-| User provisioning automation | Marawan | 4h | One-time task |
-| User templates and login testing | Meslmany | 4h | One-time task |
+| **Alaa** | | | |
+| Keycloak realm & SSO configuration | | 11h | One-time task |
+| **Marawan** | | | |
+| User provisioning automation | | 4h | One-time task |
+| **Meslmany** | | | |
+| User templates and login testing | | 4h | One-time task |
 
 **Deliverables:**
 - ✅ `roles/keycloak_config/` (178 lines)
@@ -468,9 +510,12 @@ Each batch follows the same pattern:
 
 | Task | Role | Estimate | Calculation |
 |------|------|----------|-------------|
-| Monitoring stack + ADR logger & CI integration | Alaa | 21h | 16h + 5h |
-| ADR review and finalization | Marawan | 6h | One-time task |
-| Dashboard review and alert testing | Meslmany | 4h | One-time task |
+| **Alaa** | | | |
+| Monitoring stack + ADR logger & CI integration | | 21h | 16h + 5h |
+| **Marawan** | | | |
+| ADR review and finalization | | 6h | One-time task |
+| **Meslmany** | | | |
+| Dashboard review and alert testing | | 4h | One-time task |
 
 **Deliverables:**
 - ✅ `roles/monitoring/` (234 lines)
@@ -483,22 +528,25 @@ Each batch follows the same pattern:
 
 ---
 
-#### Week 9: Testing & Backup
-**Focus:** Comprehensive testing and backup automation
+#### Week 9: Testing & Validation
+**Focus:** Comprehensive testing and restore procedures
 
 **Tasks:**
 
 | Task | Role | Estimate | Calculation |
 |------|------|----------|-------------|
-| Backup & restore automation + Molecule tests & CI integration | Alaa | 18h | 12h + 6h |
-| Test automation scripts | Marawan | 5h | One-time task |
-| Test case definition and DR testing | Meslmany | 5h | One-time task |
+| **Alaa** | | | |
+| Restore procedures & validation + Molecule tests & CI integration | | 12h | 6h + 6h |
+| **Marawan** | | | |
+| Test automation scripts | | 5h | One-time task |
+| **Meslmany** | | | |
+| Test case definition and DR testing | | 5h | One-time task |
 
 **Deliverables:**
-- ✅ `roles/backup_restore/` (198 lines)
+- ✅ `playbooks/restore.yml` (restore procedures)
 - ✅ `playbooks/verify.yml` (156 lines)
 - ✅ 189 Molecule tests (84% coverage)
-- ✅ Backup scripts for all services
+- ✅ Restore validation scripts
 - ✅ ADR-008 written
 
 ---
@@ -510,9 +558,12 @@ Each batch follows the same pattern:
 
 | Task | Role | Estimate | Calculation |
 |------|------|----------|-------------|
-| Master playbooks + CI/CD pipeline & approval gates | Alaa | 19h | 12h + 7h |
-| Deployment validation scripts | Marawan | 5h | One-time task |
-| Staging deployment testing | Meslmany | 5h | One-time task |
+| **Alaa** | | | |
+| Master playbooks + CI/CD pipeline & approval gates | | 19h | 12h + 7h |
+| **Marawan** | | | |
+| Deployment validation scripts | | 5h | One-time task |
+| **Meslmany** | | | |
+| Staging deployment testing | | 5h | One-time task |
 
 **Deliverables:**
 - ✅ `playbooks/deploy.yml` (234 lines)
@@ -531,9 +582,12 @@ Each batch follows the same pattern:
 
 | Task | Role | Estimate | Calculation |
 |------|------|----------|-------------|
-| n8n webhooks + JMeter & performance tests + Security audit | Alaa | 18h | 6h + 10h + 2h |
-| Operator documentation | Marawan | 6h | One-time task |
-| User documentation | Meslmany | 6h | One-time task |
+| **Alaa** | | | |
+| n8n webhooks + JMeter & performance tests + Security audit | | 18h | 6h + 10h + 2h |
+| **Marawan** | | | |
+| Operator documentation | | 6h | One-time task |
+| **Meslmany** | | | |
+| User documentation | | 6h | One-time task |
 
 **Deliverables:**
 - ✅ 5 n8n workflows
@@ -554,9 +608,13 @@ Each batch follows the same pattern:
 
 | Task | Role | Estimate | Calculation |
 |------|------|----------|-------------|
-| README, guides & diagrams + E2E testing | Alaa | 22h | 10h + 12h |
-| Final polish & packaging | Marawan | 5h | One-time task |
-| SE acceptance testing | Meslmany | 6h | One-time task |
+| **Alaa** | | | |
+| README, guides & diagrams | | 10h | One-time task |
+| E2E testing | | 6h | One-time task |
+| **Marawan** | | | |
+| Final polish & packaging | | 5h | One-time task |
+| **Meslmany** | | | |
+| SE acceptance testing | | 6h | One-time task |
 
 **Deliverables:**
 - ✅ Complete README with quick-start
@@ -589,7 +647,9 @@ Each batch follows the same pattern:
 | | GeoServer role (Java, Tomcat, GeoServer) | 12h |
 | | Firewall role & configuration | 6h |
 | | PostgreSQL & PostGIS setup | 10h |
+| | DB config role (schemas, users, initial SQL) | 4h |
 | | Security hardening & CIS benchmarks | 8h |
+| | Backup automation scripts | 8h |
 | | Docker & Swarm configuration | 12h |
 | | Keycloak installation & setup | 10h |
 | | Application containers (backend/frontend) | 8h |
@@ -598,7 +658,7 @@ Each batch follows the same pattern:
 | | Keycloak realm & SSO configuration | 11h |
 | | Monitoring stack (Prometheus, Grafana, Loki) | 16h |
 | | ADR logger & CI integration | 5h |
-| | Backup & restore automation | 12h |
+| | Restore procedures & validation | 6h |
 | | Molecule tests & CI integration | 6h |
 | | Master playbooks (deploy/rollback) | 12h |
 | | CI/CD pipeline & approval gates | 7h |
@@ -609,6 +669,7 @@ Each batch follows the same pattern:
 | **Xamek** | ADR templates & documentation | 3h |
 | **Marawan** | Automation helper scripts | 4h |
 | | Automated testing scripts | 13h |
+| | Config validation scripts | 5h |
 | | Deployment validation scripts | 5h |
 | | Final polish & packaging | 5h |
 | **Meslmany** | Bootstrap validation | 3h |
@@ -617,6 +678,10 @@ Each batch follows the same pattern:
 | | Staging deployment testing | 5h |
 | **Marawan + Meslmany** | Operator & user documentation | 12h |
 | **Alaa + Meslmany** | E2E testing & SE acceptance | 12h |
+
+### Implementation Specification
+
+_See detailed technical specification below in the [IaC Deployment Implementation Specification](#iac-deployment-implementation-specification) section._
 
 ---
 
@@ -636,7 +701,8 @@ Each batch follows the same pattern:
 
 | Task | Role | Estimate | Calculation |
 |------|------|----------|-------------|
-| Design automation architecture + Define paved roads standards | Xamek | 12h | 8h + 4h |
+| **Xamek** | | | |
+| Design automation architecture + Define paved roads standards | | 12h | 8h + 4h |
 
 **Deliverables:**
 - ✅ Automation architecture document
@@ -652,14 +718,26 @@ Each batch follows the same pattern:
 
 | Task | Role | Estimate | Calculation |
 |------|------|----------|-------------|
-| Paved roads script + User story coverage + Code review automation + Figma compliance + CI/CD integration | Marawan | 32h | 8h + 6h + 6h + 4h + 8h |
+| **Marawan** | | | |
+| Validation scripts (9 scripts) + n8n workflows + GitLab board automation + CI/CD integration | | 44h | 24h + 8h + 4h + 8h |
 
 **Deliverables:**
-- ✅ `scripts/paved_roads_check.py` (automated compliance)
-- ✅ `scripts/user_story_coverage.py` (requirement tracking)
-- ✅ `scripts/code_review_automation.py` (PR automation)
-- ✅ `scripts/figma_compliance_check.py` (design validation)
-- ✅ `.gitlab-ci.yml` (CI/CD integration for all checks)
+- ✅ **Validation Scripts (9 total):**
+  - `scripts/validate-user-story.sh`
+  - `scripts/validate-figma-design.sh`
+  - `scripts/check-test-coverage.sh`
+  - `scripts/validate-us-coverage.sh`
+  - `scripts/validate-figma-coverage.sh`
+  - `scripts/check-paved-roads.sh`
+  - `scripts/provision-qa-env.sh`
+  - `scripts/cleanup-qa-env.sh`
+  - `scripts/create-release.sh`
+- ✅ **n8n Workflows:**
+  - `pr_review_cycle` (reusable workflow)
+  - `update_kb` (RAGFlow integration)
+  - GitLab board automation
+  - Notification workflows
+- ✅ `.gitlab-ci.yml` (CI/CD pipeline integration)
 - ✅ Paved roads documentation published
 
 ---
@@ -672,7 +750,8 @@ Each batch follows the same pattern:
 
 | Task | Role | Estimate | Calculation |
 |------|------|----------|-------------|
-| Automation support | Marawan | 6h/week | Weekly recurring |
+| **Marawan** | | | |
+| Automation support | | 6h/week | Weekly recurring |
 
 **Activities:**
 - Monitor CI/CD pipeline health
@@ -697,12 +776,21 @@ Each batch follows the same pattern:
 |------|------|----------|
 | **Xamek** | Design automation architecture | 8h |
 | | Define paved roads standards | 4h |
-| **Marawan** | Create paved roads script | 8h |
-| | Create user story coverage script | 6h |
-| | Create code review automation | 6h |
-| | Create Figma compliance script | 4h |
-| | Integrate CI/CD | 8h |
-| | Automation support | 6h |
+| **Marawan** | Validation scripts (9 scripts total) | 24h |
+| | n8n workflows (PR cycle, KB integration) | 8h |
+| | GitLab board automation | 4h |
+| | CI/CD pipeline integration | 8h |
+| | Automation support (weekly, ongoing) | 6h/week |
+
+### Pipeline Specification
+
+_See detailed pipeline specification below in the [GitLab Automated Delivery Pipeline Specification](#gitlab-automated-delivery-pipeline-specification) section._
+
+---
+
+## Appendix: Detailed Specifications
+
+This appendix contains the complete technical specifications for Workstream 2 and Workstream 3. These specifications provide detailed implementation guidance for the development teams.
 
 ---
 
@@ -745,6 +833,11 @@ deploy/
 │   ├── postgres_postgis/
 │   ├── docker_swarm/
 │   └── ...
+├── infra/
+│   └── adr/
+│       ├── ADR-000-foundation.md
+│       ├── ADR-001-geoserver-firewall.md
+│       └── ...
 ├── tests/
 │   └── verify.yml
 ├── bootstrap.sh
@@ -956,7 +1049,6 @@ tests/performance/
 **Test Scenarios:**
 
 | Test Plan | Target | Scenario | Users | Duration |
-{{ ... }}
 |-----------|--------|----------|-------|----------|
 | `api_load_test.jmx` | Backend API | CRUD operations on layers | 100-1000 | 30 min |
 | `geoserver_wms_test.jmx` | GeoServer WMS | GetMap requests (various sizes) | 50-500 | 20 min |
