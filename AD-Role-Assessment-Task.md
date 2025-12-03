@@ -1,6 +1,5 @@
 # Advanced Delivery Role - Technical Assessment Task
 
-**Duration:** 4-6 hours  
 **Format:** Take-home assignment  
 **Objective:** Evaluate candidate's ability to handle end-to-end delivery with technical depth and architectural thinking
 
@@ -21,7 +20,7 @@ You are the Advanced Delivery engineer assigned to a **National Emergency Respon
 
 ---
 
-## Part 1: System Architecture & Design (90 minutes)
+## Part 1: System Architecture & Design
 
 ### Task
 Design the technical architecture for this system. Provide:
@@ -48,7 +47,7 @@ Design the technical architecture for this system. Provide:
 
 ---
 
-## Part 2: Database Design (60 minutes)
+## Part 2: Database Design
 
 ### Task
 Design the database schema for the emergency incident system.
@@ -81,7 +80,7 @@ Provide:
 
 ---
 
-## Part 3: API Design (60 minutes)
+## Part 3: API Design
 
 ### Task
 Design the REST API for the emergency incident system.
@@ -111,7 +110,7 @@ Provide an **OpenAPI/Swagger specification** (YAML or JSON) that includes:
 
 ---
 
-## Part 4: Integration Challenge (60 minutes)
+## Part 4: Integration Challenge
 
 ### Task
 The legacy dispatch system provides a SOAP API to retrieve dispatch records. You need to integrate it with your modern REST API.
@@ -148,7 +147,7 @@ The legacy dispatch system provides a SOAP API to retrieve dispatch records. You
 
 ---
 
-## Part 5: Deployment & DevOps (45 minutes)
+## Part 5: Deployment & DevOps
 
 ### Task
 Design the deployment strategy for this system.
@@ -176,7 +175,7 @@ Design the deployment strategy for this system.
 
 ---
 
-## Part 6: Workflow Automation (45 minutes)
+## Part 6: Workflow Automation
 
 ### Task
 Design a workflow for incident escalation using Camunda.
@@ -202,7 +201,7 @@ Design a workflow for incident escalation using Camunda.
 
 ---
 
-## Part 7: Problem Solving & Trade-offs (30 minutes)
+## Part 7: Problem Solving & Trade-offs
 
 ### Task
 Answer the following questions:
